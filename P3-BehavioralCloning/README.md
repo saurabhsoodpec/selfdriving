@@ -129,11 +129,11 @@ To augment the data sat, I also flipped images and angles thinking that this wou
 
 Also, to balance the data I plotted the angles of all the generated images in a histogram and noticed that there was a huge bias towards the ZERO and corresponding LEFT and RIGHT images.
 
-![Angles Unbalanced histogram] (./examples/angles-histogram-unbalanced.png)
+![Angles Unbalanced histogram](./examples/angles-histogram-unbalanced.png)
 
 Because of this bias the model was constantly learning to keep the angles ZERO. So, I used thresholding and randomization to balance the dataset. Here is how the angles histogram looked after proper balancing - 
 
-![Angles balanced histogram] (./examples/angles-histogram-balanced.png)
+![Angles balanced histogram](./examples/angles-histogram-balanced.png)
 
 I finally randomly shuffled the data set and put 10% of the data into a validation set. 
 
