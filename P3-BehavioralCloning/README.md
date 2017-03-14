@@ -122,7 +122,7 @@ I then used image translation and left and right images to make model learn how 
 
 Then I repeated this process on track two in order to get more data points.
 
-To augment the data sat, I also flipped images and angles thinking that this would ... For example, here is an image that has then been flipped:
+To augment the data sat, I also flipped images and angles as this would allow the model to be more generalized instead of getting biased towards one direction. For example, here is an image that has then been flipped:
 
 ![Original Image](./examples/flipped_image1.png)
 ![Flipped Image](./examples/flipped_image2.png)
