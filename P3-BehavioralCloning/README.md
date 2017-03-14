@@ -18,12 +18,13 @@ The goals / steps of this project are the following:
 
 [//]: # (Image References)
 
-![image1](./examples/original.png "Original Image")
-![image2](./examples/trimmed.png "Trimmed")
-![image3](./examples/trimmed-adjustedbrightness.png "Adjusted Brightness")
-![image4](./examples/right-translated.png "Right Translated")
-![image5](./examples/left-translated.png "Left Translated")
-![image6](./examples/flipped_image1.png "Flipped Image")
+**Original Image** - ![image1](./examples/original.png "Original Image")
+**Trimmed Image** - ![image2](./examples/trimmed.png "Trimmed")
+**Adjusted Brightness** - ![image3](./examples/trimmed-adjustedbrightness.png "Adjusted Brightness")
+**Right Translated - ![image4](./examples/right-translated.png "Right Translated")
+**Left Translated** - ![image5](./examples/left-translated.png "Left Translated")
+**Flipped Image** - ![image6](./examples/flipped_image1.png "Flipped Image")
+</br>**Resized to 64x64** - </br>
 ![image7](./examples/64x64.png "Resized to 64x64")
 
 ---
