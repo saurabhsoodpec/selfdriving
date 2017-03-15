@@ -18,14 +18,14 @@ The goals / steps of this project are the following:
 
 [//]: # (Image References)
 
-**Original Image** - ![image1](./examples/original.png "Original Image")
-**Trimmed Image** - ![image2](./examples/trimmed.png "Trimmed")
-**Adjusted Brightness** - ![image3](./examples/trimmed-adjustedbrightness.png "Adjusted Brightness")
-**Right Translated - ![image4](./examples/right-translated.png "Right Translated")
-**Left Translated** - ![image5](./examples/left-translated.png "Left Translated")
-**Flipped Image** - ![image6](./examples/flipped_image1.png "Flipped Image")
+**Original Image** - <img src="https://github.com/saurabhsoodpec/selfdriving/blob/master/P3-BehavioralCloning/examples/original.png" alt="Original Image" width="480">
+**Trimmed Image** - <img src="https://github.com/saurabhsoodpec/selfdriving/blob/master/P3-BehavioralCloning/examples/trimmed.png" alt="Trimmed" width="480">
+**Adjusted Brightness** - <img src="https://github.com/saurabhsoodpec/selfdriving/blob/master/P3-BehavioralCloning/examples/trimmed-adjustedbrightness.png" alt="Adjusted Brightness" width="480"> 
+**Right Translated - <img src="https://github.com/saurabhsoodpec/selfdriving/blob/master/P3-BehavioralCloning/examples/right-translated.png" alt="Right Translated" width="480">
+**Left Translated** - <img src="https://github.com/saurabhsoodpec/selfdriving/blob/master/P3-BehavioralCloning/examples/left-translated.png" alt="Left Translated" width="480"> 
+**Flipped Image** - <img src="https://github.com/saurabhsoodpec/selfdriving/blob/master/P3-BehavioralCloning/examples/flipped_image1.png" alt="Flipped Image" width="480">
 </br>**Resized to 64x64** - </br>
-![image7](./examples/64x64.png "Resized to 64x64")
+<img src="https://github.com/saurabhsoodpec/selfdriving/blob/master/P3-BehavioralCloning/examples/64x64.png" alt="Resized to 64x64" width="480">
 
 ---
 **Files Submitted**
@@ -107,7 +107,7 @@ At the end of the process, the vehicle is able to drive autonomously around the 
 
 The final model architecture consisted of a 3 convolution neural network layers with the following layers and layer sizes. Here is a visualization of the architecture
 
-![Model Image](./examples/model.png)
+<img src="https://github.com/saurabhsoodpec/selfdriving/blob/master/P3-BehavioralCloning/examples/model.png" alt="Network Model" width="200">
 
 ####3. Creation of the Training Set & Training Process
 
