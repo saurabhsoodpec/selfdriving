@@ -1,2 +1,2 @@
 # Self Driving
-Repository to host all the Self Driving Car projects
+Repository to host Self Driving Car projects
