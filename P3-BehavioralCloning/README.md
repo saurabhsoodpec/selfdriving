@@ -21,9 +21,8 @@ The goals / steps of this project are the following:
 **Original Image** - </br><img src="https://github.com/saurabhsoodpec/selfdriving/blob/master/P3-BehavioralCloning/examples/original.png" alt="Original Image" width="480"></br>
 **Trimmed Image** - </br><img src="https://github.com/saurabhsoodpec/selfdriving/blob/master/P3-BehavioralCloning/examples/trimmed.png" alt="Trimmed" width="480"></br>
 **Adjusted Brightness** - </br><img src="https://github.com/saurabhsoodpec/selfdriving/blob/master/P3-BehavioralCloning/examples/trimmed-adjustedbrightness.png" alt="Adjusted Brightness" width="480"></br> 
-**Left Translated** - </br><img src="https://github.com/saurabhsoodpec/selfdriving/blob/master/P3-BehavioralCloning/examples/left-translated.png" alt="Left Translated" width="480"> </br>
 **Right Translated** -</br> <img src="https://github.com/saurabhsoodpec/selfdriving/blob/master/P3-BehavioralCloning/examples/right-translated.png" alt="Right Translated" width="480"></br>
-**Flipped Image** - </br><img src="https://github.com/saurabhsoodpec/selfdriving/blob/master/P3-BehavioralCloning/examples/flipped_image1.png" alt="Flipped Image" width="480">
+**Flipped Image** - </br><img src="https://github.com/saurabhsoodpec/selfdriving/blob/master/P3-BehavioralCloning/examples/left-translated.png" alt="Left Translated" width="480"> </br>
 </br>**Resized to 64x64** - </br>
 <img src="https://github.com/saurabhsoodpec/selfdriving/blob/master/P3-BehavioralCloning/examples/64x64.png" alt="Resized to 64x64" width="320">
 
