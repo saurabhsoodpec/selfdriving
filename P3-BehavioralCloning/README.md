@@ -25,7 +25,7 @@ The goals / steps of this project are the following:
 **Left Translated** - </br><img src="https://github.com/saurabhsoodpec/selfdriving/blob/master/P3-BehavioralCloning/examples/left-translated.png" alt="Left Translated" width="480"> </br>
 **Flipped Image** - </br><img src="https://github.com/saurabhsoodpec/selfdriving/blob/master/P3-BehavioralCloning/examples/flipped_image1.png" alt="Flipped Image" width="480">
 </br>**Resized to 64x64** - </br>
-<img src="https://github.com/saurabhsoodpec/selfdriving/blob/master/P3-BehavioralCloning/examples/64x64.png" alt="Resized to 64x64" width="480">
+<img src="https://github.com/saurabhsoodpec/selfdriving/blob/master/P3-BehavioralCloning/examples/64x64.png" alt="Resized to 64x64" width="320">
 
 ---
 **Files Submitted**
@@ -105,7 +105,7 @@ At the end of the process, the vehicle is able to drive autonomously around the 
 
 *2. Final Model Architecture*
 
-The final model architecture consisted of a 3 convolution neural network layers with the following layers and layer sizes. Here is a visualization of the architecture
+The final model architecture consisted of a 3 convolution neural network layers with the following layers and layer sizes. Here is a visualization of the architecture -
 
 <img src="https://github.com/saurabhsoodpec/selfdriving/blob/master/P3-BehavioralCloning/examples/model.png" alt="Network Model" width="200">
 
