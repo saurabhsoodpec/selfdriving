@@ -139,3 +139,7 @@ I finally randomly shuffled the data set and put 10% of the data into a validati
 I used this training data for training the model. The validation set helped determine if the model was over or under fitting. The ideal number of epochs was 10 but I kept saving the model after each epoch along with the error rate. I used an adam optimizer so that manually training the learning rate wasn't necessary.
 
 Finally car was able to drive successfully on the simulator track!
+
+Here is the final output - 
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/p7_8QKgZVtc" frameborder="0" allowfullscreen></iframe>
