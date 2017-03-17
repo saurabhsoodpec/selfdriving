@@ -141,5 +141,4 @@ I used this training data for training the model. The validation set helped dete
 Finally car was able to drive successfully on the simulator track!
 
 Here is the final output - 
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/p7_8QKgZVtc" frameborder="0" allowfullscreen></iframe>
+[![ScreenShot](./examples/youTube-image.png)](https://www.youtube.com/embed/p7_8QKgZVtc)
