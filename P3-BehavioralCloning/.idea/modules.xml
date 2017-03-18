@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/P3-BehavioralCloning.iml" filepath="$PROJECT_DIR$/.idea/P3-BehavioralCloning.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../../selfdriving/external-projects/karthik/sdcnd/projects/term1/P4-AdvancedLaneLines/.idea/P4-AdvancedLaneLines.iml" filepath="$PROJECT_DIR$/../../../selfdriving/external-projects/karthik/sdcnd/projects/term1/P4-AdvancedLaneLines/.idea/P4-AdvancedLaneLines.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../../selfdriving/project4/.idea/project4.iml" filepath="$PROJECT_DIR$/../../../selfdriving/project4/.idea/project4.iml" />
+    </modules>
+  </component>
+</project>
