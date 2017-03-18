@@ -18,14 +18,13 @@ The goals / steps of this project are the following:
 
 [//]: # (Image References)
 
-**Original Image** - ![image1](./examples/original.png "Original Image")
-**Trimmed Image** - ![image2](./examples/trimmed.png "Trimmed")
-**Adjusted Brightness** - ![image3](./examples/trimmed-adjustedbrightness.png "Adjusted Brightness")
-**Right Translated - ![image4](./examples/right-translated.png "Right Translated")
-**Left Translated** - ![image5](./examples/left-translated.png "Left Translated")
-**Flipped Image** - ![image6](./examples/flipped_image1.png "Flipped Image")
+**Original Image** - </br><img src="https://github.com/saurabhsoodpec/selfdriving/blob/master/P3-BehavioralCloning/examples/original.png" alt="Original Image" width="480"></br>
+**Trimmed Image** - </br><img src="https://github.com/saurabhsoodpec/selfdriving/blob/master/P3-BehavioralCloning/examples/trimmed.png" alt="Trimmed" width="480"></br>
+**Adjusted Brightness** - </br><img src="https://github.com/saurabhsoodpec/selfdriving/blob/master/P3-BehavioralCloning/examples/trimmed-adjustedbrightness.png" alt="Adjusted Brightness" width="480"></br> 
+**Right Translated** -</br> <img src="https://github.com/saurabhsoodpec/selfdriving/blob/master/P3-BehavioralCloning/examples/right-translated.png" alt="Right Translated" width="480"></br>
+**Flipped Image** - </br><img src="https://github.com/saurabhsoodpec/selfdriving/blob/master/P3-BehavioralCloning/examples/left-translated.png" alt="Left Translated" width="480"> </br>
 </br>**Resized to 64x64** - </br>
-![image7](./examples/64x64.png "Resized to 64x64")
+<img src="https://github.com/saurabhsoodpec/selfdriving/blob/master/P3-BehavioralCloning/examples/64x64.png" alt="Resized to 64x64" width="320">
 
 ---
 **Files Submitted**
@@ -105,9 +104,9 @@ At the end of the process, the vehicle is able to drive autonomously around the 
 
 *2. Final Model Architecture*
 
-The final model architecture consisted of a 3 convolution neural network layers with the following layers and layer sizes. Here is a visualization of the architecture
+The final model architecture consisted of a 3 convolution neural network layers with the following layers and layer sizes. Here is a visualization of the architecture -
 
-![Model Image](./examples/model.png)
+<img src="https://github.com/saurabhsoodpec/selfdriving/blob/master/P3-BehavioralCloning/examples/model.png" alt="Network Model" width="200">
 
 ####3. Creation of the Training Set & Training Process
 
@@ -122,7 +121,7 @@ I then used image translation and left and right images to make model learn how 
 
 Then I repeated this process on track two in order to get more data points.
 
-To augment the data sat, I also flipped images and angles thinking that this would ... For example, here is an image that has then been flipped:
+To augment the data sat, I also flipped images and angles as this would allow the model to be more generalized instead of getting biased towards one direction. For example, here is an image that has then been flipped:
 
 ![Original Image](./examples/flipped_image1.png)
 ![Flipped Image](./examples/flipped_image2.png)
@@ -140,3 +139,6 @@ I finally randomly shuffled the data set and put 10% of the data into a validati
 I used this training data for training the model. The validation set helped determine if the model was over or under fitting. The ideal number of epochs was 10 but I kept saving the model after each epoch along with the error rate. I used an adam optimizer so that manually training the learning rate wasn't necessary.
 
 Finally car was able to drive successfully on the simulator track!
+
+Here is the final output - 
+[![ScreenShot](./examples/youTube-image.png)](https://www.youtube.com/embed/p7_8QKgZVtc)
