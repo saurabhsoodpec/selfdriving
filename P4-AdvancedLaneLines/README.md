@@ -16,6 +16,7 @@ The goals / steps of this project are the following:
 * Warp the detected lane boundaries back onto the original image.
 * Output visual display of the lane boundaries and numerical estimation of lane curvature and vehicle position.
 
+[image0]: ./output_images/chessboard.png "Chessboard"
 [image1]: ./output_images/un-distort.png "Undistorted"
 [image2]: ./output_images/thresh-gradient-x.png "Threshold X Gradient"
 [image3]: ./output_images/thresh-gradient-y.png "Threshold X Gradient"
@@ -29,8 +30,8 @@ The goals / steps of this project are the following:
 [image11]: ./output_images/perspective.png "Perspective Transform"
 [image12]: ./output_images/histogram.png "Histogram"
 [image13]: ./output_images/lane-detect.png "Lane Detection"
-[image13]: ./output_images/final-output.png "Final Warpped Image"
-[video14]: ./output_images/project_video_output.mp4 "Video"
+[image14]: ./output_images/final-output.png "Final Warpped Image"
+[video15]: ./output_images/project_video_output.mp4 "Video"
 
 ## Project Details
 
@@ -45,21 +46,40 @@ I start by preparing "object points", which will be the (x, y, z) coordinates of
 
 I then used the output `objpoints` and `imgpoints` to compute the camera calibration and distortion coefficients using the `cv2.calibrateCamera()` function.  I applied this distortion correction to the test image using the `cv2.undistort()` function and obtained this result: 
 
-![alt text][image1]
+![alt text][image0]
 
 ###Pipeline (single images)
 
-####1. Provide an example of a distortion-corrected image.
+**Gradient Thresholding**
+
 To demonstrate this step, I will describe how I apply the distortion correction to one of the test images like this one:
+![alt text][image1]
+
+I used a combination of color and gradient thresholds to generate a binary image (check `lane_util.py` and CarND-Advanced-Lane-Lines.ipynb).  
+Here's an example of my output for this at every step - 
+
 ![alt text][image2]
-####2. Describe how (and identify where in your code) you used color transforms, gradients or other methods to create a thresholded binary image.  Provide an example of a binary image result.
-I used a combination of color and gradient thresholds to generate a binary image (thresholding steps at lines # through # in `another_file.py`).  Here's an example of my output for this step.  (note: this is not actually from one of the test images)
 
 ![alt text][image3]
+![alt text][image4]
+![alt text][image5]
+![alt text][image6]
+![alt text][image7]
 
-####3. Describe how (and identify where in your code) you performed a perspective transform and provide an example of a transformed image.
+**S Channel Thresholding**
+Also, I transformed the image into different colour space - HLS and applied "S Channel" thresholding - 
 
-The code for my perspective transform includes a function called `warper()`, which appears in lines 1 through 8 in the file `example.py` (output_images/examples/example.py) (or, for example, in the 3rd code cell of the IPython notebook).  The `warper()` function takes as inputs an image (`img`), as well as source (`src`) and destination (`dst`) points.  I chose the hardcode the source and destination points in the following manner:
+![alt text][image8]
+
+**Final Binary with Threshold and S Channel**
+![alt text][image9]
+
+**Masking**
+I also applied masking to the image to remove the redundant sections of the image.
+![alt text][image10]
+
+**Perspective Transform**
+The code for my perspective transform includes a function called `apply_perspective()`, which appears in the file `lane_util.py`.  The `apply_perspective()` function takes as inputs an image (`img`), and uses source (`src`) and destination (`dst`) points to transpose the image.  I chose the hardcode the source and destination points in the following manner:
 
 ```
 src = np.float32(
@@ -78,44 +98,36 @@ This resulted in the following source and destination points:
 
 | Source        | Destination   | 
 |:-------------:|:-------------:| 
-| 585, 460      | 320, 0        | 
-| 203, 720      | 320, 720      |
-| 1127, 720     | 960, 720      |
-| 695, 460      | 960, 0        |
+| 300, 661      | 300, 720        | 
+| 560, 476      | 300, 0      |
+| 734, 476     | 700, 0      |
+| 1010, 656      | 700, 720        |
 
 I verified that my perspective transform was working as expected by drawing the `src` and `dst` points onto a test image and its warped counterpart to verify that the lines appear parallel in the warped image.
 
-![alt text][image4]
+![alt text][image11]
 
-####4. Describe how (and identify where in your code) you identified lane-line pixels and fit their positions with a polynomial?
+Then I plotted the identified points on histogram.
 
-Then I did some other stuff and fit my lane lines with a 2nd order polynomial kinda like this:
+![alt text][image12]
 
-![alt text][image5]
+Then I used the peaks in the histogram to pick the 2 prominent lane line points and fit my lane lines with a 2nd order polynomial kinda like this:
 
-####5. Describe how (and identify where in your code) you calculated the radius of curvature of the lane and the position of the vehicle with respect to center.
+![alt text][image13]
 
-I did this in lines # through # in my code in `my_other_file.py`
+**Un-Warp Image**
+I un wrapped the image using the inverse matrix and warped image generated in the previous section. This is implemented in my code in `lane_util.py` in the function `unwarp_image()`.  Here is an example of my result on a test image:
 
-####6. Provide an example image of your result plotted back down onto the road such that the lane area is identified clearly.
-
-I implemented this step in lines # through # in my code in `yet_another_file.py` in the function `map_lane()`.  Here is an example of my result on a test image:
-
-![alt text][image6]
+![alt text][image14]
 
 ---
 
 ###Pipeline (video)
 
-####1. Provide a link to your final video output.  Your pipeline should perform reasonably well on the entire project video (wobbly lines are ok but no catastrophic failures that would cause the car to drive off the road!).
-
-Here's a [link to my video result](./project_video.mp4)
+Here's a [link to my video result](./output_images/project_video_output.mp4)
 
 ---
 
 ###Discussion
 
-####1. Briefly discuss any problems / issues you faced in your implementation of this project.  Where will your pipeline likely fail?  What could you do to make it more robust?
-
-Here I'll talk about the approach I took, what techniques I used, what worked and why, where the pipeline might fail and how I might improve it if I were going to pursue this project further.  
-
+Here I would like to highlight the other aspects used to improve the result. I used `Smoothing` to average the polynomial results. Also, I used sanity check to validate the lane lines and ignore the lines which are not parallel. 
