@@ -73,14 +73,17 @@ def process_clip(clip_image):
     right_line = get_right_line()
     left_line = get_left_line()
 
+    right_line.detected = False
+    left_line.detected = False
+
     if return_poly == None:
         print("No Object Returned")
         right_curverad = None
         left_fit = None
         right_fit = None
         out_img = None
-        left_lane_inds = None
-        right_lane_inds = None
+        left_lane_xy = None
+        right_lane_xy = None
 
         #plot_original_and_newImage(image, binary_warped, 'Perspective Warped')
         #histogram = np.sum(binary_warped[binary_warped.shape[0] / 2:, :], axis=0)
@@ -95,25 +98,53 @@ def process_clip(clip_image):
         left_fit = return_poly[2]
         right_fit = return_poly[3]
         out_img = return_poly[4]
-        left_lane_inds = return_poly[5]
-        right_lane_inds = return_poly[6]
+        left_lane_xy = return_poly[5]
+        right_lane_xy = return_poly[6]
 
         #print("Curve Coff Intercept Diff= ", (right_fit[2] - left_fit[2]))
         intercept_diff = right_fit[2] - left_fit[2]
-        if intercept_diff >350 and intercept_diff<450:
+
+        if intercept_diff >340 and intercept_diff<460:
+            right_line.detected = True
+            left_line.detected = True
+
+            left_line.line_base_pos = left_fit[2]
+            right_line.line_base_pos = right_fit[2]
+
             right_line.current_fit = right_fit
             left_line.current_fit = left_fit
+            right_line.recent_xfitted.append(right_fit)
+            left_line.recent_xfitted.append(left_fit)
+
+            right_line.best_fit = np.average(right_line.recent_xfitted, axis=0)
+            left_line.best_fit = np.average(left_line.recent_xfitted, axis=0)
+
             left_line.radius_of_curvature=left_curverad
             right_line.radius_of_curvature=right_curverad
+            left_line.allx.append(left_lane_xy[0])
+            left_line.ally.append(left_lane_xy[1])
+            right_line.allx.append(right_lane_xy[0])
+            right_line.ally.append(right_lane_xy[1])
+
+            if (len(right_line.recent_xfitted) > 5):
+                right_line.recent_xfitted = []
+            if (len(left_line.recent_xfitted) > 5):
+                left_line.recent_xfitted = []
         else:
             print("Lines far apart or too close. Intercept diff=", intercept_diff)
 
-    unwarpped_image = unwarp_image(clip_image, binary_warped, Minv, left_line.current_fit, right_line.current_fit)
+    unwarpped_image = unwarp_image(clip_image, binary_warped, Minv, left_line.best_fit, right_line.best_fit)
 
-    text_position = (math.ceil(imshape[1] / 2) - 100, 100)
-    text = "Curves=" + str(left_line.radius_of_curvature)
+    text_curve_location = (math.ceil(imshape[1] / 2) - 200, 50)
+    text_curves = "Curves:" + str(left_line.radius_of_curvature) + "," + str(right_line.radius_of_curvature)
     font = cv2.FONT_HERSHEY_SIMPLEX
-    cv2.putText(unwarpped_image, text, text_position, font, 1, (0, 0, 255), 2, cv2.LINE_AA)
+    cv2.putText(unwarpped_image, text_curves, text_curve_location, font, 1, (0, 0, 255), 2, cv2.LINE_AA)
+
+    text_position_location = (math.ceil(imshape[1] / 2) - 200, imshape[0] - 20)
+
+    car_position_in_lane = imshape[1]/2 - left_line.line_base_pos
+    text_position = "Position:" + str(car_position_in_lane)
+    cv2.putText(unwarpped_image, text_position, text_position_location, font, 1, (0, 0, 255), 2, cv2.LINE_AA)
 
     """
     outFileName = './out_images/pic_' + currDT + '_out.png'

@@ -338,7 +338,7 @@ def fit_poly(binary_warped):
     # Fit a second order polynomial to each
     left_fit = np.polyfit(lefty, leftx, 2)
     right_fit = np.polyfit(righty, rightx, 2)
-    return (left_curverad, right_curverad, left_fit, right_fit, out_img, left_lane_inds, right_lane_inds)
+    return (left_curverad, right_curverad, left_fit, right_fit, out_img, (leftx,lefty), (rightx,righty))
 
 
 def unwarp_image(img, warped_binary, Minv, left_fit, right_fit):
