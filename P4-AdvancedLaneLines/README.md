@@ -31,7 +31,7 @@ The goals / steps of this project are the following:
 [image12]: ./output_images/histogram.png "Histogram"
 [image13]: ./output_images/lane-detect.png "Lane Detection"
 [image14]: ./output_images/final-output.png "Final Warpped Image"
-[video15]: ./output_images/project_video_output.mp4 "Video"
+[video15]: ./project_video_output.mp4 "Video"
 
 ## Project Details
 
@@ -124,7 +124,7 @@ I un wrapped the image using the inverse matrix and warped image generated in th
 
 ###Pipeline (video)
 
-Here's a [link to my video result](./output_images/project_video_output.mp4)
+Here's a [link to my video result](./project_video_output.mp4)
 
 ---
 
