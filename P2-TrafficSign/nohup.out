@@ -1,0 +1,437 @@
+[I 08:16:35.979 NotebookApp] [nb_conda_kernels] enabled, 2 kernels found
+[W 08:16:36.554 NotebookApp] WARNING: The notebook server is listening on all IP addresses and not using encryption. This is not recommended.
+[W 08:16:36.555 NotebookApp] WARNING: The notebook server is listening on all IP addresses and not using authentication. This is highly insecure and not recommended.
+[I 08:16:36.611 NotebookApp] [nb_anacondacloud] enabled
+[I 08:16:36.661 NotebookApp] ✓ nbpresent HTML export ENABLED
+[W 08:16:36.661 NotebookApp] ✗ nbpresent PDF export DISABLED: No module named 'nbbrowserpdf'
+[I 08:16:36.666 NotebookApp] [nb_conda] enabled
+[I 08:16:36.670 NotebookApp] Serving notebooks from local directory: /home/ubuntu/project2/traffic-signs
+[I 08:16:36.670 NotebookApp] 0 active kernels 
+[I 08:16:36.670 NotebookApp] The Jupyter Notebook is running at: http://[all ip addresses on your system]:8888/
+[I 08:16:36.670 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[W 08:16:36.671 NotebookApp] No web browser found: could not locate runnable browser.
+[I 08:17:27.023 NotebookApp] Kernel started: aac6086f-ef85-47eb-a53c-4c34778afeca
+[I 08:19:28.134 NotebookApp] Saving file at /Traffic_Signs_Recognition_COVNET.ipynb
+[I 08:31:03.811 NotebookApp] Kernel started: 0c62f677-7d8d-4d2b-af18-41605824a190
+[I 08:35:27.954 NotebookApp] Saving file at /Traffic_Signs_Recognition_COVNET.ipynb
+[I 08:37:27.611 NotebookApp] Saving file at /Traffic_Signs_Recognition_COVNET.ipynb
+[I 08:39:27.621 NotebookApp] Saving file at /Traffic_Signs_Recognition_COVNET.ipynb
+[I 08:41:28.206 NotebookApp] Saving file at /Traffic_Signs_Recognition_COVNET.ipynb
+[I 08:55:38.036 NotebookApp] Kernel started: bfef4b09-7643-4b47-964d-5b0d8e446c8f
+[I 08:57:39.604 NotebookApp] Saving file at /Traffic_Signs_Recognition_COVNET3.ipynb
+[I 08:59:33.932 NotebookApp] Kernel restarted: bfef4b09-7643-4b47-964d-5b0d8e446c8f
+[I 08:59:38.140 NotebookApp] Saving file at /Traffic_Signs_Recognition_COVNET3.ipynb
+[I 08:59:40.853 NotebookApp] Kernel restarted: bfef4b09-7643-4b47-964d-5b0d8e446c8f
+[I 09:01:14.301 NotebookApp] Kernel interrupted: bfef4b09-7643-4b47-964d-5b0d8e446c8f
+[I 09:01:38.643 NotebookApp] Saving file at /Traffic_Signs_Recognition_COVNET3.ipynb
+[I 09:03:39.008 NotebookApp] Saving file at /Traffic_Signs_Recognition_COVNET3.ipynb
+[I 09:04:55.932 NotebookApp] Kernel interrupted: aac6086f-ef85-47eb-a53c-4c34778afeca
+[I 09:05:27.650 NotebookApp] Saving file at /Traffic_Signs_Recognition_COVNET.ipynb
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Key fc2_1/Variable_1/Adam not found in checkpoint
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Key conv1_1/Variable not found in checkpoint
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Key conv1_1/Variable_1/Adam_1 not found in checkpoint
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Key conv1_1/Variable/Adam_1 not found in checkpoint
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Key fc1_1/Variable/Adam not found in checkpoint
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Key fc1_1/Variable_1/Adam_1 not found in checkpoint
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Key beta1_power_1 not found in checkpoint
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Key fc2_1/Variable_1/Adam_1 not found in checkpoint
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Key fc1_1/Variable not found in checkpoint
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Key conv1_1/Variable_1 not found in checkpoint
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Key beta2_power_1 not found in checkpoint
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Key fc1_1/Variable_1 not found in checkpoint
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Key conv1_1/Variable_1/Adam not found in checkpoint
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Key fc1_1/Variable_1/Adam not found in checkpoint
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Key fc1_1/Variable/Adam_1 not found in checkpoint
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Key fc2_1/Variable_1 not found in checkpoint
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Key conv1_1/Variable/Adam not found in checkpoint
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Key fc2_1/Variable/Adam_1 not found in checkpoint
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Key fc2_1/Variable not found in checkpoint
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Key fc2_1/Variable/Adam not found in checkpoint
+[I 09:07:09.844 NotebookApp] Kernel restarted: bfef4b09-7643-4b47-964d-5b0d8e446c8f
+[I 09:07:20.101 NotebookApp] Kernel restarted: bfef4b09-7643-4b47-964d-5b0d8e446c8f
+[I 09:07:27.639 NotebookApp] Saving file at /Traffic_Signs_Recognition_COVNET.ipynb
+[I 09:07:38.120 NotebookApp] Saving file at /Traffic_Signs_Recognition_COVNET3.ipynb
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Key beta1_power_2 not found in checkpoint
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Key conv1_2/Variable not found in checkpoint
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Key conv1_2/Variable_1 not found in checkpoint
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Key conv1_2/Variable/Adam_1 not found in checkpoint
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Key beta2_power_1 not found in checkpoint
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Key conv1_1/Variable/Adam_1 not found in checkpoint
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Key beta1_power_1 not found in checkpoint
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Key conv1_2/Variable_1/Adam_1 not found in checkpoint
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Key conv1_1/Variable_1/Adam not found in checkpoint
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Key conv1_1/Variable_1 not found in checkpoint
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Key fc1_1/Variable/Adam not found in checkpoint
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Key conv1_1/Variable_1/Adam_1 not found in checkpoint
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Key beta2_power_2 not found in checkpoint
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Key fc1_1/Variable not found in checkpoint
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Key fc1_1/Variable_1 not found in checkpoint
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Key fc2_2/Variable_1/Adam_1 not found in checkpoint
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Key conv1_1/Variable not found in checkpoint
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Key conv1_1/Variable/Adam not found in checkpoint
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Key conv1_2/Variable/Adam not found in checkpoint
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Key fc1_2/Variable/Adam_1 not found in checkpoint
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Key fc1_2/Variable_1/Adam_1 not found in checkpoint
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Key fc1_1/Variable/Adam_1 not found in checkpoint
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Key conv1_2/Variable_1/Adam not found in checkpoint
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Key fc1_1/Variable_1/Adam_1 not found in checkpoint
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Key fc1_1/Variable_1/Adam not found in checkpoint
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Key fc2_2/Variable not found in checkpoint
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Key fc2_2/Variable_1/Adam not found in checkpoint
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Key fc1_2/Variable_1 not found in checkpoint
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Key fc1_2/Variable/Adam not found in checkpoint
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Key fc1_2/Variable_1/Adam not found in checkpoint
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Key fc2_1/Variable_1 not found in checkpoint
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Key fc1_2/Variable not found in checkpoint
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Key fc2_1/Variable_1/Adam not found in checkpoint
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Key fc2_2/Variable/Adam not found in checkpoint
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Key fc2_1/Variable/Adam not found in checkpoint
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Key fc2_2/Variable/Adam_1 not found in checkpoint
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Key fc2_1/Variable_1/Adam_1 not found in checkpoint
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Key fc2_1/Variable/Adam_1 not found in checkpoint
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Key fc2_2/Variable_1 not found in checkpoint
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Key fc2_1/Variable not found in checkpoint
+[I 09:09:29.157 NotebookApp] Saving file at /Traffic_Signs_Recognition_COVNET.ipynb
+[I 09:09:38.698 NotebookApp] Saving file at /Traffic_Signs_Recognition_COVNET3.ipynb
+[I 09:10:42.826 NotebookApp] Kernel restarted: aac6086f-ef85-47eb-a53c-4c34778afeca
+[I 09:11:27.656 NotebookApp] Saving file at /Traffic_Signs_Recognition_COVNET.ipynb
+[I 09:11:38.656 NotebookApp] Saving file at /Traffic_Signs_Recognition_COVNET3.ipynb
+W tensorflow/core/framework/op_kernel.cc:975] Invalid argument: You must feed a value for placeholder tensor 'x' with dtype float
+	 [[Node: x = Placeholder[dtype=DT_FLOAT, shape=[], _device="/job:localhost/replica:0/task:0/cpu:0"]()]]
+W tensorflow/core/framework/op_kernel.cc:975] Invalid argument: You must feed a value for placeholder tensor 'x' with dtype float
+	 [[Node: x = Placeholder[dtype=DT_FLOAT, shape=[], _device="/job:localhost/replica:0/task:0/cpu:0"]()]]
+[I 09:13:38.630 NotebookApp] Saving file at /Traffic_Signs_Recognition_COVNET3.ipynb
+[I 09:15:38.631 NotebookApp] Saving file at /Traffic_Signs_Recognition_COVNET3.ipynb
+W tensorflow/core/framework/op_kernel.cc:975] Invalid argument: You must feed a value for placeholder tensor 'y_2' with dtype float
+	 [[Node: y_2 = Placeholder[dtype=DT_FLOAT, shape=[], _device="/job:localhost/replica:0/task:0/cpu:0"]()]]
+W tensorflow/core/framework/op_kernel.cc:975] Invalid argument: You must feed a value for placeholder tensor 'y_2' with dtype float
+	 [[Node: y_2 = Placeholder[dtype=DT_FLOAT, shape=[], _device="/job:localhost/replica:0/task:0/cpu:0"]()]]
+[I 09:17:38.638 NotebookApp] Saving file at /Traffic_Signs_Recognition_COVNET3.ipynb
+[I 09:19:38.636 NotebookApp] Saving file at /Traffic_Signs_Recognition_COVNET3.ipynb
+[I 09:21:27.674 NotebookApp] Saving file at /Traffic_Signs_Recognition_COVNET.ipynb
+[I 09:22:18.498 NotebookApp] Kernel restarted: aac6086f-ef85-47eb-a53c-4c34778afeca
+[I 09:23:27.582 NotebookApp] Saving file at /Traffic_Signs_Recognition_COVNET.ipynb
+[I 09:25:27.548 NotebookApp] Saving file at /Traffic_Signs_Recognition_COVNET.ipynb
+[I 09:27:27.563 NotebookApp] Saving file at /Traffic_Signs_Recognition_COVNET.ipynb
+[I 09:29:27.556 NotebookApp] Saving file at /Traffic_Signs_Recognition_COVNET.ipynb
+[I 09:29:39.182 NotebookApp] Saving file at /Traffic_Signs_Recognition_COVNET3.ipynb
+E tensorflow/core/util/events_writer.cc:162] The events file ./gtsd-summary/events.out.tfevents.1485163555.ip-10-146-76-233 has disappeared.
+E tensorflow/core/util/events_writer.cc:131] Failed to flush 1 events to ./gtsd-summary/events.out.tfevents.1485163555.ip-10-146-76-233
+E tensorflow/core/util/events_writer.cc:162] The events file ./gtsd-summary/events.out.tfevents.1485163555.ip-10-146-76-233 has disappeared.
+E tensorflow/core/util/events_writer.cc:131] Failed to flush 2 events to ./gtsd-summary/events.out.tfevents.1485163555.ip-10-146-76-233
+[I 09:30:04.748 NotebookApp] Kernel restarted: aac6086f-ef85-47eb-a53c-4c34778afeca
+[I 09:31:08.275 NotebookApp] Kernel restarted: aac6086f-ef85-47eb-a53c-4c34778afeca
+[I 09:31:27.646 NotebookApp] Saving file at /Traffic_Signs_Recognition_COVNET.ipynb
+[I 09:33:27.566 NotebookApp] Saving file at /Traffic_Signs_Recognition_COVNET.ipynb
+[I 09:33:39.190 NotebookApp] Saving file at /Traffic_Signs_Recognition_COVNET3.ipynb
+[I 09:34:36.880 NotebookApp] Kernel interrupted: aac6086f-ef85-47eb-a53c-4c34778afeca
+[I 09:34:42.177 NotebookApp] Kernel restarted: aac6086f-ef85-47eb-a53c-4c34778afeca
+[I 09:34:46.019 NotebookApp] Kernel restarted: aac6086f-ef85-47eb-a53c-4c34778afeca
+[I 09:35:27.071 NotebookApp] Saving file at /Traffic_Signs_Recognition_COVNET.ipynb
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Key fc2_1/Variable_1/Adam_1 not found in checkpoint
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Key beta1_power_1 not found in checkpoint
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Key fc1_1/Variable/Adam_1 not found in checkpoint
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Key conv1_1/Variable_1/Adam_1 not found in checkpoint
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Key fc1_1/Variable/Adam not found in checkpoint
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Key conv1_1/Variable/Adam not found in checkpoint
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Key conv1_1/Variable_1/Adam not found in checkpoint
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Key conv1_1/Variable/Adam_1 not found in checkpoint
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Key beta2_power_1 not found in checkpoint
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Key fc1_1/Variable_1/Adam_1 not found in checkpoint
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Key fc2_1/Variable_1/Adam not found in checkpoint
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Key conv1_1/Variable not found in checkpoint
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Key fc1_1/Variable_1/Adam not found in checkpoint
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Key fc1_1/Variable_1 not found in checkpoint
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Key fc1_1/Variable not found in checkpoint
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Key conv1_1/Variable_1 not found in checkpoint
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Key fc2_1/Variable not found in checkpoint
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Key fc2_1/Variable/Adam_1 not found in checkpoint
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Key fc2_1/Variable/Adam not found in checkpoint
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Key fc2_1/Variable_1 not found in checkpoint
+[I 09:37:27.572 NotebookApp] Saving file at /Traffic_Signs_Recognition_COVNET.ipynb
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Key fc2_1/Variable_1/Adam_1 not found in checkpoint
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Key conv1_1/Variable not found in checkpoint
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Key fc1_1/Variable not found in checkpoint
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Key fc1_1/Variable_1/Adam_1 not found in checkpoint
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Key conv1_1/Variable/Adam not found in checkpoint
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Key conv1_1/Variable_1 not found in checkpoint
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Key beta1_power_1 not found in checkpoint
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Key conv1_1/Variable/Adam_1 not found in checkpoint
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Key fc2_1/Variable_1/Adam not found in checkpoint
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Key fc2_1/Variable/Adam not found in checkpoint
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Key fc1_1/Variable_1 not found in checkpoint
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Key conv1_1/Variable_1/Adam_1 not found in checkpoint
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Key fc1_1/Variable_1/Adam not found in checkpoint
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Key beta2_power_1 not found in checkpoint
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Key fc1_1/Variable/Adam not found in checkpoint
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Key fc1_1/Variable/Adam_1 not found in checkpoint
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Key fc2_1/Variable not found in checkpoint
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Key conv1_1/Variable_1/Adam not found in checkpoint
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Key fc2_1/Variable_1 not found in checkpoint
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Key fc2_1/Variable/Adam_1 not found in checkpoint
+[I 09:39:27.568 NotebookApp] Saving file at /Traffic_Signs_Recognition_COVNET.ipynb
+[I 09:41:27.576 NotebookApp] Saving file at /Traffic_Signs_Recognition_COVNET.ipynb
+[I 09:43:27.553 NotebookApp] Saving file at /Traffic_Signs_Recognition_COVNET.ipynb
+[I 09:45:27.566 NotebookApp] Saving file at /Traffic_Signs_Recognition_COVNET.ipynb
+[I 09:51:28.077 NotebookApp] Saving file at /Traffic_Signs_Recognition_COVNET.ipynb
+[I 09:57:28.080 NotebookApp] Saving file at /Traffic_Signs_Recognition_COVNET.ipynb
+W tensorflow/core/framework/op_kernel.cc:975] Invalid argument: You must feed a value for placeholder tensor 'x' with dtype float
+	 [[Node: x = Placeholder[dtype=DT_FLOAT, shape=[], _device="/job:localhost/replica:0/task:0/cpu:0"]()]]
+W tensorflow/core/framework/op_kernel.cc:975] Invalid argument: You must feed a value for placeholder tensor 'x' with dtype float
+	 [[Node: x = Placeholder[dtype=DT_FLOAT, shape=[], _device="/job:localhost/replica:0/task:0/cpu:0"]()]]
+W tensorflow/core/framework/op_kernel.cc:975] Invalid argument: You must feed a value for placeholder tensor 'x' with dtype float
+	 [[Node: x = Placeholder[dtype=DT_FLOAT, shape=[], _device="/job:localhost/replica:0/task:0/cpu:0"]()]]
+W tensorflow/core/framework/op_kernel.cc:975] Invalid argument: You must feed a value for placeholder tensor 'x' with dtype float
+	 [[Node: x = Placeholder[dtype=DT_FLOAT, shape=[], _device="/job:localhost/replica:0/task:0/cpu:0"]()]]
+[I 09:59:27.536 NotebookApp] Saving file at /Traffic_Signs_Recognition_COVNET.ipynb
+W tensorflow/core/framework/op_kernel.cc:975] Invalid argument: You must feed a value for placeholder tensor 'x' with dtype float
+	 [[Node: x = Placeholder[dtype=DT_FLOAT, shape=[], _device="/job:localhost/replica:0/task:0/cpu:0"]()]]
+W tensorflow/core/framework/op_kernel.cc:975] Invalid argument: You must feed a value for placeholder tensor 'x' with dtype float
+	 [[Node: x = Placeholder[dtype=DT_FLOAT, shape=[], _device="/job:localhost/replica:0/task:0/cpu:0"]()]]
+[I 10:03:27.564 NotebookApp] Saving file at /Traffic_Signs_Recognition_COVNET.ipynb
+[I 10:04:28.478 NotebookApp] Kernel interrupted: aac6086f-ef85-47eb-a53c-4c34778afeca
+[I 10:05:00.620 NotebookApp] Kernel restarted: aac6086f-ef85-47eb-a53c-4c34778afeca
+[I 10:05:04.877 NotebookApp] Kernel restarted: aac6086f-ef85-47eb-a53c-4c34778afeca
+[I 10:05:27.521 NotebookApp] Saving file at /Traffic_Signs_Recognition_COVNET.ipynb
+[I 10:06:34.955 NotebookApp] Kernel interrupted: aac6086f-ef85-47eb-a53c-4c34778afeca
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Unsuccessful TensorSliceReader constructor: Failed to find any matching files for ./checkpoints/gtsd-01-22-17-1.chkpt
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Unsuccessful TensorSliceReader constructor: Failed to find any matching files for ./checkpoints/gtsd-01-22-17-1.chkpt
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Unsuccessful TensorSliceReader constructor: Failed to find any matching files for ./checkpoints/gtsd-01-22-17-1.chkpt
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Unsuccessful TensorSliceReader constructor: Failed to find any matching files for ./checkpoints/gtsd-01-22-17-1.chkpt
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Unsuccessful TensorSliceReader constructor: Failed to find any matching files for ./checkpoints/gtsd-01-22-17-1.chkpt
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Unsuccessful TensorSliceReader constructor: Failed to find any matching files for ./checkpoints/gtsd-01-22-17-1.chkpt
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Unsuccessful TensorSliceReader constructor: Failed to find any matching files for ./checkpoints/gtsd-01-22-17-1.chkpt
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Unsuccessful TensorSliceReader constructor: Failed to find any matching files for ./checkpoints/gtsd-01-22-17-1.chkpt
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Unsuccessful TensorSliceReader constructor: Failed to find any matching files for ./checkpoints/gtsd-01-22-17-1.chkpt
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Unsuccessful TensorSliceReader constructor: Failed to find any matching files for ./checkpoints/gtsd-01-22-17-1.chkpt
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Unsuccessful TensorSliceReader constructor: Failed to find any matching files for ./checkpoints/gtsd-01-22-17-1.chkpt
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Unsuccessful TensorSliceReader constructor: Failed to find any matching files for ./checkpoints/gtsd-01-22-17-1.chkpt
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Unsuccessful TensorSliceReader constructor: Failed to find any matching files for ./checkpoints/gtsd-01-22-17-1.chkpt
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Unsuccessful TensorSliceReader constructor: Failed to find any matching files for ./checkpoints/gtsd-01-22-17-1.chkpt
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Unsuccessful TensorSliceReader constructor: Failed to find any matching files for ./checkpoints/gtsd-01-22-17-1.chkpt
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Unsuccessful TensorSliceReader constructor: Failed to find any matching files for ./checkpoints/gtsd-01-22-17-1.chkpt
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Unsuccessful TensorSliceReader constructor: Failed to find any matching files for ./checkpoints/gtsd-01-22-17-1.chkpt
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Unsuccessful TensorSliceReader constructor: Failed to find any matching files for ./checkpoints/gtsd-01-22-17-1.chkpt
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Unsuccessful TensorSliceReader constructor: Failed to find any matching files for ./checkpoints/gtsd-01-22-17-1.chkpt
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Unsuccessful TensorSliceReader constructor: Failed to find any matching files for ./checkpoints/gtsd-01-22-17-1.chkpt
+[I 10:06:49.187 NotebookApp] Kernel restarted: aac6086f-ef85-47eb-a53c-4c34778afeca
+[I 10:06:51.899 NotebookApp] Kernel restarted: aac6086f-ef85-47eb-a53c-4c34778afeca
+[I 10:07:27.515 NotebookApp] Saving file at /Traffic_Signs_Recognition_COVNET.ipynb
+[I 10:08:30.194 NotebookApp] Kernel interrupted: aac6086f-ef85-47eb-a53c-4c34778afeca
+[I 10:08:57.887 NotebookApp] Kernel restarted: aac6086f-ef85-47eb-a53c-4c34778afeca
+[I 10:09:02.681 NotebookApp] Kernel restarted: aac6086f-ef85-47eb-a53c-4c34778afeca
+[I 10:09:27.518 NotebookApp] Saving file at /Traffic_Signs_Recognition_COVNET.ipynb
+[W 11:15:59.577 NotebookApp] Replacing stale connection: 0c62f677-7d8d-4d2b-af18-41605824a190:CEE69510308540F2BE71CF26F482CD34
+[I 11:31:45.105 NotebookApp] Kernel interrupted: aac6086f-ef85-47eb-a53c-4c34778afeca
+[C 11:32:34.926 NotebookApp] received signal 15, stopping
+[I 11:32:34.927 NotebookApp] Shutting down kernels
+[I 11:32:35.028 NotebookApp] Kernel shutdown: bfef4b09-7643-4b47-964d-5b0d8e446c8f
+[I 11:32:35.029 NotebookApp] Kernel shutdown: aac6086f-ef85-47eb-a53c-4c34778afeca
+[I 11:32:35.029 NotebookApp] Kernel shutdown: 0c62f677-7d8d-4d2b-af18-41605824a190
+[I 18:20:49.217 NotebookApp] [nb_conda_kernels] enabled, 2 kernels found
+[I 18:20:49.224 NotebookApp] Writing notebook server cookie secret to /run/user/1000/jupyter/notebook_cookie_secret
+[W 18:20:50.094 NotebookApp] WARNING: The notebook server is listening on all IP addresses and not using encryption. This is not recommended.
+[W 18:20:50.095 NotebookApp] WARNING: The notebook server is listening on all IP addresses and not using authentication. This is highly insecure and not recommended.
+[I 18:20:50.241 NotebookApp] [nb_anacondacloud] enabled
+[I 18:20:50.346 NotebookApp] ✓ nbpresent HTML export ENABLED
+[W 18:20:50.346 NotebookApp] ✗ nbpresent PDF export DISABLED: No module named 'nbbrowserpdf'
+[I 18:20:50.354 NotebookApp] [nb_conda] enabled
+[I 18:20:50.359 NotebookApp] Serving notebooks from local directory: /home/ubuntu/project2/traffic-signs
+[I 18:20:50.359 NotebookApp] 0 active kernels 
+[I 18:20:50.359 NotebookApp] The Jupyter Notebook is running at: http://[all ip addresses on your system]:8888/
+[I 18:20:50.359 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[W 18:20:50.360 NotebookApp] No web browser found: could not locate runnable browser.
+[I 18:21:42.850 NotebookApp] Kernel started: 9d4f2730-27f2-4150-9385-63537b3c4a1b
+[I 18:23:50.256 NotebookApp] Saving file at /Traffic_Signs_Recognition_COVNET.ipynb
+[I 19:15:44.964 NotebookApp] Saving file at /Traffic_Signs_Recognition_COVNET.ipynb
+[I 19:19:43.241 NotebookApp] Saving file at /Traffic_Signs_Recognition_COVNET.ipynb
+[I 19:28:25.677 NotebookApp] 302 GET / (54.148.186.20) 0.52ms
+[I 19:28:26.067 NotebookApp] 302 GET /HNAP1/ (54.148.186.20) 0.38ms
+[W 19:28:26.238 NotebookApp] 404 GET /HNAP1 (54.148.186.20) 9.24ms referer=http://54.147.253.29:8888/
+[I 19:45:43.446 NotebookApp] Saving file at /Traffic_Signs_Recognition_COVNET.ipynb
+[I 19:48:48.656 NotebookApp] Saving file at /Traffic_Signs_Recognition_COVNET.ipynb
+[I 19:50:03.509 NotebookApp] Kernel restarted: 9d4f2730-27f2-4150-9385-63537b3c4a1b
+[I 19:51:42.350 NotebookApp] Saving file at /Traffic_Signs_Recognition_COVNET.ipynb
+[I 19:52:17.365 NotebookApp] Kernel restarted: 9d4f2730-27f2-4150-9385-63537b3c4a1b
+[I 19:53:34.549 NotebookApp] Kernel restarted: 9d4f2730-27f2-4150-9385-63537b3c4a1b
+[I 19:53:42.364 NotebookApp] Saving file at /Traffic_Signs_Recognition_COVNET.ipynb
+[I 19:54:38.796 NotebookApp] Kernel restarted: 9d4f2730-27f2-4150-9385-63537b3c4a1b
+[I 19:55:42.904 NotebookApp] Saving file at /Traffic_Signs_Recognition_COVNET.ipynb
+[I 19:59:43.322 NotebookApp] Saving file at /Traffic_Signs_Recognition_COVNET.ipynb
+[I 20:01:43.090 NotebookApp] Saving file at /Traffic_Signs_Recognition_COVNET.ipynb
+[I 20:03:43.669 NotebookApp] Saving file at /Traffic_Signs_Recognition_COVNET.ipynb
+[I 20:05:42.876 NotebookApp] Saving file at /Traffic_Signs_Recognition_COVNET.ipynb
+[I 20:07:42.869 NotebookApp] Saving file at /Traffic_Signs_Recognition_COVNET.ipynb
+[I 20:09:42.882 NotebookApp] Saving file at /Traffic_Signs_Recognition_COVNET.ipynb
+[I 20:11:42.874 NotebookApp] Saving file at /Traffic_Signs_Recognition_COVNET.ipynb
+[I 20:13:42.886 NotebookApp] Saving file at /Traffic_Signs_Recognition_COVNET.ipynb
+[I 20:15:43.060 NotebookApp] Saving file at /Traffic_Signs_Recognition_COVNET.ipynb
+[I 20:17:42.877 NotebookApp] Saving file at /Traffic_Signs_Recognition_COVNET.ipynb
+[I 20:19:42.882 NotebookApp] Saving file at /Traffic_Signs_Recognition_COVNET.ipynb
+[I 20:21:42.874 NotebookApp] Saving file at /Traffic_Signs_Recognition_COVNET.ipynb
+[I 20:23:42.936 NotebookApp] Saving file at /Traffic_Signs_Recognition_COVNET.ipynb
+[I 20:27:16.128 NotebookApp] Kernel restarted: 9d4f2730-27f2-4150-9385-63537b3c4a1b
+[I 20:27:42.867 NotebookApp] Saving file at /Traffic_Signs_Recognition_COVNET.ipynb
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Key beta1_power_1 not found in checkpoint
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Key conv1_1/Variable_1/Adam not found in checkpoint
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Key beta2_power_1 not found in checkpoint
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Key fc1_1/Variable/Adam_1 not found in checkpoint
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Key conv1_1/Variable not found in checkpoint
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Key fc1_1/Variable not found in checkpoint
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Key fc2_1/Variable not found in checkpoint
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Key conv1_1/Variable/Adam not found in checkpoint
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Key conv1_1/Variable/Adam_1 not found in checkpoint
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Key fc1_1/Variable_1 not found in checkpoint
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Key conv1_1/Variable_1 not found in checkpoint
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Key fc2_1/Variable_1/Adam not found in checkpoint
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Key fc2_1/Variable_1 not found in checkpoint
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Key fc2_1/Variable/Adam not found in checkpoint
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Key fc1_1/Variable/Adam not found in checkpoint
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Key conv1_1/Variable_1/Adam_1 not found in checkpoint
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Key fc2_1/Variable/Adam_1 not found in checkpoint
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Key fc1_1/Variable_1/Adam_1 not found in checkpoint
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Key fc2_1/Variable_1/Adam_1 not found in checkpoint
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Key fc1_1/Variable_1/Adam not found in checkpoint
+[I 20:29:42.896 NotebookApp] Saving file at /Traffic_Signs_Recognition_COVNET.ipynb
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Key fc2_1/Variable_1/Adam_1 not found in checkpoint
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Key beta2_power_1 not found in checkpoint
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Key conv1_1/Variable_1 not found in checkpoint
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Key conv1_1/Variable not found in checkpoint
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Key fc1_1/Variable/Adam_1 not found in checkpoint
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Key conv1_1/Variable_1/Adam not found in checkpoint
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Key conv1_1/Variable/Adam not found in checkpoint
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Key fc1_1/Variable/Adam not found in checkpoint
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Key fc1_1/Variable_1/Adam_1 not found in checkpoint
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Key conv1_1/Variable_1/Adam_1 not found in checkpoint
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Key fc1_1/Variable not found in checkpoint
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Key conv1_1/Variable/Adam_1 not found in checkpoint
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Key fc1_1/Variable_1 not found in checkpoint
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Key fc1_1/Variable_1/Adam not found in checkpoint
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Key fc2_1/Variable_1/Adam not found in checkpoint
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Key fc2_1/Variable/Adam not found in checkpoint
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Key beta1_power_1 not found in checkpoint
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Key fc2_1/Variable not found in checkpoint
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Key fc2_1/Variable_1 not found in checkpoint
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Key fc2_1/Variable/Adam_1 not found in checkpoint
+[I 20:31:42.892 NotebookApp] Saving file at /Traffic_Signs_Recognition_COVNET.ipynb
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Key fc2_1/Variable_1/Adam_1 not found in checkpoint
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Key conv1_1/Variable_1/Adam not found in checkpoint
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Key fc2_1/Variable/Adam_1 not found in checkpoint
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Key fc2_1/Variable_1/Adam not found in checkpoint
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Key fc1_1/Variable/Adam not found in checkpoint
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Key conv1_1/Variable_1/Adam_1 not found in checkpoint
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Key fc1_1/Variable_1/Adam not found in checkpoint
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Key conv1_1/Variable_1 not found in checkpoint
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Key fc2_1/Variable_1 not found in checkpoint
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Key fc1_1/Variable_1 not found in checkpoint
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Key fc2_1/Variable/Adam not found in checkpoint
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Key fc2_1/Variable not found in checkpoint
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Key conv1_1/Variable not found in checkpoint
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Key fc1_1/Variable/Adam_1 not found in checkpoint
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Key beta1_power_1 not found in checkpoint
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Key fc1_1/Variable_1/Adam_1 not found in checkpoint
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Key beta2_power_1 not found in checkpoint
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Key fc1_1/Variable not found in checkpoint
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Key conv1_1/Variable/Adam_1 not found in checkpoint
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Key conv1_1/Variable/Adam not found in checkpoint
+[I 20:33:42.888 NotebookApp] Saving file at /Traffic_Signs_Recognition_COVNET.ipynb
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Key beta2_power_1 not found in checkpoint
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Key conv1_2/Variable_1/Adam_1 not found in checkpoint
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Key conv1_2/Variable_1 not found in checkpoint
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Key fc2_2/Variable_1/Adam_1 not found in checkpoint
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Key conv1_1/Variable_1 not found in checkpoint
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Key conv1_1/Variable_1/Adam_1 not found in checkpoint
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Key conv1_1/Variable_1/Adam not found in checkpoint
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Key conv1_2/Variable not found in checkpoint
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Key conv1_2/Variable/Adam not found in checkpoint
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Key fc1_1/Variable not found in checkpoint
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Key beta2_power_2 not found in checkpoint
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Key conv1_1/Variable/Adam not found in checkpoint
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Key conv1_2/Variable/Adam_1 not found in checkpoint
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Key beta1_power_2 not found in checkpoint
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Key beta1_power_1 not found in checkpoint
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Key fc1_2/Variable not found in checkpoint
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Key fc1_1/Variable/Adam not found in checkpoint
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Key conv1_1/Variable/Adam_1 not found in checkpoint
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Key conv1_1/Variable not found in checkpoint
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Key fc1_1/Variable_1/Adam_1 not found in checkpoint
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Key fc1_1/Variable/Adam_1 not found in checkpoint
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Key fc2_2/Variable_1/Adam not found in checkpoint
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Key fc1_2/Variable/Adam_1 not found in checkpoint
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Key fc1_1/Variable_1/Adam not found in checkpoint
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Key conv1_2/Variable_1/Adam not found in checkpoint
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Key fc1_2/Variable_1 not found in checkpoint
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Key fc1_1/Variable_1 not found in checkpoint
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Key fc2_1/Variable/Adam_1 not found in checkpoint
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Key fc2_2/Variable_1 not found in checkpoint
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Key fc2_2/Variable not found in checkpoint
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Key fc2_1/Variable_1/Adam not found in checkpoint
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Key fc2_1/Variable/Adam not found in checkpoint
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Key fc1_2/Variable_1/Adam not found in checkpoint
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Key fc2_2/Variable/Adam not found in checkpoint
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Key fc2_1/Variable_1 not found in checkpoint
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Key fc1_2/Variable_1/Adam_1 not found in checkpoint
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Key fc1_2/Variable/Adam not found in checkpoint
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Key fc2_1/Variable_1/Adam_1 not found in checkpoint
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Key fc2_2/Variable/Adam_1 not found in checkpoint
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Key fc2_1/Variable not found in checkpoint
+[I 20:35:42.915 NotebookApp] Saving file at /Traffic_Signs_Recognition_COVNET.ipynb
+[I 20:37:19.081 NotebookApp] Kernel restarted: 9d4f2730-27f2-4150-9385-63537b3c4a1b
+[I 20:37:42.907 NotebookApp] Saving file at /Traffic_Signs_Recognition_COVNET.ipynb
+[I 20:38:23.596 NotebookApp] Kernel restarted: 9d4f2730-27f2-4150-9385-63537b3c4a1b
+[I 20:39:42.862 NotebookApp] Saving file at /Traffic_Signs_Recognition_COVNET.ipynb
+[I 20:40:49.735 NotebookApp] Kernel restarted: 9d4f2730-27f2-4150-9385-63537b3c4a1b
+[I 20:41:42.760 NotebookApp] Saving file at /Traffic_Signs_Recognition_COVNET.ipynb
+W tensorflow/core/framework/op_kernel.cc:975] Invalid argument: Minimum tensor rank: 2 but got: 1
+	 [[Node: ArgMax_7 = ArgMax[T=DT_UINT8, Tidx=DT_INT32, _device="/job:localhost/replica:0/task:0/cpu:0"](ArgMax_7/input, ArgMax_7/dimension)]]
+W tensorflow/core/framework/op_kernel.cc:975] Invalid argument: Minimum tensor rank: 2 but got: 1
+	 [[Node: ArgMax_7 = ArgMax[T=DT_UINT8, Tidx=DT_INT32, _device="/job:localhost/replica:0/task:0/cpu:0"](ArgMax_7/input, ArgMax_7/dimension)]]
+[I 20:43:43.352 NotebookApp] Saving file at /Traffic_Signs_Recognition_COVNET.ipynb
+W tensorflow/core/framework/op_kernel.cc:975] Invalid argument: Minimum tensor rank: 2 but got: 1
+	 [[Node: ArgMax_7 = ArgMax[T=DT_UINT8, Tidx=DT_INT32, _device="/job:localhost/replica:0/task:0/cpu:0"](ArgMax_7/input, ArgMax_7/dimension)]]
+[I 20:45:42.860 NotebookApp] Saving file at /Traffic_Signs_Recognition_COVNET.ipynb
+[I 20:47:42.877 NotebookApp] Saving file at /Traffic_Signs_Recognition_COVNET.ipynb
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Key fc2_1/Variable_1/Adam not found in checkpoint
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Key conv1_1/Variable_1/Adam not found in checkpoint
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Key beta2_power_1 not found in checkpoint
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Key fc1_1/Variable_1 not found in checkpoint
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Key fc2_1/Variable_1/Adam_1 not found in checkpoint
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Key conv1_1/Variable_1/Adam_1 not found in checkpoint
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Key fc2_1/Variable_1 not found in checkpoint
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Key beta1_power_1 not found in checkpoint
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Key fc2_1/Variable/Adam not found in checkpoint
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Key conv1_1/Variable_1 not found in checkpoint
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Key fc1_1/Variable_1/Adam not found in checkpoint
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Key conv1_1/Variable not found in checkpoint
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Key fc2_1/Variable not found in checkpoint
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Key fc2_1/Variable/Adam_1 not found in checkpoint
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Key conv1_1/Variable/Adam not found in checkpoint
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Key fc1_1/Variable/Adam not found in checkpoint
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Key fc1_1/Variable not found in checkpoint
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Key fc1_1/Variable/Adam_1 not found in checkpoint
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Key fc1_1/Variable_1/Adam_1 not found in checkpoint
+W tensorflow/core/framework/op_kernel.cc:975] Not found: Key conv1_1/Variable/Adam_1 not found in checkpoint
+[I 20:49:22.952 NotebookApp] Kernel restarted: 9d4f2730-27f2-4150-9385-63537b3c4a1b
+[I 20:49:42.859 NotebookApp] Saving file at /Traffic_Signs_Recognition_COVNET.ipynb
+W tensorflow/core/framework/op_kernel.cc:975] Invalid argument: Minimum tensor rank: 2 but got: 1
+	 [[Node: ArgMax_7 = ArgMax[T=DT_UINT8, Tidx=DT_INT32, _device="/job:localhost/replica:0/task:0/cpu:0"](ArgMax_7/input, ArgMax_7/dimension)]]
+[I 20:52:22.270 NotebookApp] Saving file at /Traffic_Signs_Recognition_COVNET.ipynb
+[I 20:56:07.636 NotebookApp] Kernel restarted: 9d4f2730-27f2-4150-9385-63537b3c4a1b
+[I 20:59:13.327 NotebookApp] Saving file at /Traffic_Signs_Recognition_COVNET.ipynb
+[I 21:01:43.847 NotebookApp] Kernel interrupted: 9d4f2730-27f2-4150-9385-63537b3c4a1b
+[I 21:05:49.130 NotebookApp] Kernel restarted: 9d4f2730-27f2-4150-9385-63537b3c4a1b
+[I 21:06:29.030 NotebookApp] Saving file at /Traffic_Signs_Recognition_COVNET.ipynb
+[I 21:12:54.977 NotebookApp] Saving file at /Traffic_Signs_Recognition_COVNET.ipynb
+[W 21:13:09.258 NotebookApp] 404 GET http://testp1.piwo.pila.pl/testproxy.php (91.196.50.33) 1.93ms referer=None
+[I 21:18:23.042 NotebookApp] Kernel restarted: 9d4f2730-27f2-4150-9385-63537b3c4a1b
+[I 21:19:43.695 NotebookApp] Saving file at /Traffic_Signs_Recognition_COVNET.ipynb
+[I 21:29:59.910 NotebookApp] Kernel restarted: 9d4f2730-27f2-4150-9385-63537b3c4a1b
+[I 21:33:23.664 NotebookApp] Saving file at /Traffic_Signs_Recognition_COVNET.ipynb
+[I 21:40:13.599 NotebookApp] Saving file at /Traffic_Signs_Recognition_COVNET.ipynb
+[I 21:47:03.954 NotebookApp] Saving file at /Traffic_Signs_Recognition_COVNET.ipynb
+[I 21:53:54.014 NotebookApp] Saving file at /Traffic_Signs_Recognition_COVNET.ipynb
+[I 22:00:43.919 NotebookApp] Saving file at /Traffic_Signs_Recognition_COVNET.ipynb
+[W 22:25:31.031 NotebookApp] WebSocket ping timeout after 119844 ms.
+[C 23:05:48.952 NotebookApp] received signal 15, stopping
+[I 23:05:48.967 NotebookApp] Shutting down kernels
+[I 23:05:49.068 NotebookApp] Kernel shutdown: 9d4f2730-27f2-4150-9385-63537b3c4a1b

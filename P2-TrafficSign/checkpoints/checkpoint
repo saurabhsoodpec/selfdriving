@@ -1,0 +1,2 @@
+model_checkpoint_path: "gtsd-01-22-17-1.chkpt"
+all_model_checkpoint_paths: "gtsd-01-22-17-1.chkpt"
