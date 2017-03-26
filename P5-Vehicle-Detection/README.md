@@ -17,6 +17,12 @@ The goals / steps of this project are the following:
 [image5]: ./output_images/heatmap-1.png
 [image6]: ./output_images/heatmap.png
 [image7]: ./output_images/output_bboxes.png
+[image8]: ./output_images/hog_output_orient_8.png
+[image9]: ./output_images/hog_output_orient_9.png
+[image10]: ./output_images/sliding_windows.png
+[image11]: ./output_images/HSV-S-Channel.png
+[image12]: ./output_images/YCrCb-Y-Channel.png
+[image13]: ./output_images/color-space.png
 [video1]: ./project_video_out.mp4
 
 ---
@@ -40,13 +46,47 @@ Here is an example using the `YCrCb` color space and HOG parameters of `orientat
 
 ####2. Explain how you settled on your final choice of HOG parameters.
 
-I tried various combinations of parameters and finally decided to use the following values - 
-hog_orientations = 8
-hog_pix_per_cell = 8
-hog_cell_per_block = 2
-hog_channel = [1,2]
+I experimented with various parameters available for tuning and improve image feature extraction. Here the the various feature used -
 
+1. Spatial binning
+2. Color histogram
+3. Histogram of oriented gradients
+	1. hog_orientations
+	2. hog_pix_per_cell
+	3. hog_cell_per_block
 
+*Spatial binning*
+For spacial binning I used the small value 16,16 to have small size evaluations.
+
+*Color histogram*
+Refer to the attached jupyter notebook "CarND-Vehicle-Detection.ipynb" for the code. I plotted individual car and non-car image and converted it to various color channels - RGB, HSV, YCrCb and YUV. I noticed that S channel of HSV and multiple channels of YCrCb are displaying good results.
+
+![alt text][image13]
+
+Also, the image of the car shows better results - 
+![alt text][image11]
+![alt text][image12]
+
+I experimented with various values of hog parameters, and here are the details - 
+
+1. hog_orientations=8, hog_pix_per_cell=8, hog_cell_per_block=2
+2. hog_orientations=9, hog_pix_per_cell=8, hog_cell_per_block=2
+3. hog_orientations=8, hog_pix_per_cell=16, hog_cell_per_block=2
+4. hog_orientations=8, hog_pix_per_cell=16, hog_cell_per_block=1
+5. hog_orientations=9, hog_pix_per_cell=16, hog_cell_per_block=2
+6. hog_orientations=9, hog_pix_per_cell=16, hog_cell_per_block=1
+7. hog_orientations=9, hog_pix_per_cell=8, hog_cell_per_block=1
+
+*Results*
+![alt text][image8]
+![alt text][image9]
+
+Based on the above results I decided to use the following values - 
+
+ 1. hog_orientations = 8
+ 2. hog_pix_per_cell = 8
+ 3. hog_cell_per_block = 2
+ 
 ####3. Describe how (and identify where in your code) you trained a classifier using your selected HOG features (and color features if you used them).
 
 I trained a linear SVM using `LinearSVC`. This code is in the method named `train_classifier` in jupyter notebook .
@@ -55,8 +95,14 @@ I trained a linear SVM using `LinearSVC`. This code is in the method named `trai
 
 ####1. Describe how (and identify where in your code) you implemented a sliding window search.  How did you decide what scales to search and how much to overlap windows?
 
-I decided to search random window positions at random scales all over the image and used find_cars method for that. 
+The sliding window search contains 3 different scales and range of windows
 
+windows = get_windows(img, x_range=(None, None), y_range=(400, 500), window_size=(96, 96), overlap=(0.75, 0.75))
+windows += get_windows(img, x_range=(None, None), y_range=(400, 500), window_size=(144, 144), overlap=(0.75, 0.75))
+windows += get_windows(img, x_range=(None, None), y_range=(430, 550), window_size=(192, 192), overlap=(0.75, 0.75))
+windows += get_windows(img, x_range=(None, None), y_range=(460, 580), window_size=(192, 192), overlap=(0.75, 0.75))
+
+![Sliding Windows][image10]
 
 ####2. Show some examples of test images to demonstrate how your pipeline is working.  What did you do to optimize the performance of your classifier?
 
