@@ -77,7 +77,6 @@ I experimented with various values of hog parameters, and here are the details -
 6. hog_orientations=9, hog_pix_per_cell=16, hog_cell_per_block=1
 7. hog_orientations=9, hog_pix_per_cell=8, hog_cell_per_block=1
 
-*Results*
 ![alt text][image8]
 ![alt text][image9]
 
@@ -97,10 +96,10 @@ I trained a linear SVM using `LinearSVC`. This code is in the method named `trai
 
 The sliding window search contains 3 different scales and range of windows
 
-windows = get_windows(img, x_range=(None, None), y_range=(400, 500), window_size=(96, 96), overlap=(0.75, 0.75))
-windows += get_windows(img, x_range=(None, None), y_range=(400, 500), window_size=(144, 144), overlap=(0.75, 0.75))
-windows += get_windows(img, x_range=(None, None), y_range=(430, 550), window_size=(192, 192), overlap=(0.75, 0.75))
-windows += get_windows(img, x_range=(None, None), y_range=(460, 580), window_size=(192, 192), overlap=(0.75, 0.75))
+1. windows = get_windows(img, x_range=(None, None), y_range=(400, 500), window_size=(96, 96), overlap=(0.75, 0.75))
+2. windows += get_windows(img, x_range=(None, None), y_range=(400, 500), window_size=(144, 144), overlap=(0.75, 0.75))
+3. windows += get_windows(img, x_range=(None, None), y_range=(430, 550), window_size=(192, 192), overlap=(0.75, 0.75))
+4. windows += get_windows(img, x_range=(None, None), y_range=(460, 580), window_size=(192, 192), overlap=(0.75, 0.75))
 
 ![Sliding Windows][image10]
 
