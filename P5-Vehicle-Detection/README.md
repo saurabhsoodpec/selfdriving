@@ -55,10 +55,10 @@ I experimented with various parameters available for tuning and improve image fe
 	2. hog_pix_per_cell
 	3. hog_cell_per_block
 
-*Spatial binning*
+**Spatial binning**
 For spacial binning I used the small value 16,16 to have small size evaluations.
 
-*Color histogram*
+**Color histogram**
 Refer to the attached jupyter notebook "CarND-Vehicle-Detection.ipynb" for the code. I plotted individual car and non-car image and converted it to various color channels - RGB, HSV, YCrCb and YUV. I noticed that S channel of HSV and multiple channels of YCrCb are displaying good results.
 
 ![alt text][image13]
@@ -67,6 +67,9 @@ Also, the image of the car shows better results -
 ![alt text][image11]
 ![alt text][image12]
 
+After training the model with both "HSV" and "YCrCb" I found that the accuracy of "YCrCb" is better and hence I used "YCrCb" in my final training model.
+
+**Histogram of oriented gradients**
 I experimented with various values of hog parameters, and here are the details - 
 
 1. hog_orientations=8, hog_pix_per_cell=8, hog_cell_per_block=2
@@ -96,6 +99,7 @@ I trained a linear SVM using `LinearSVC`. This code is in the method named `trai
 
 The sliding window search contains 3 different scales and range of windows
 
+Code - 
 1. windows = get_windows(img, x_range=(None, None), y_range=(400, 500), window_size=(96, 96), overlap=(0.75, 0.75))
 2. windows += get_windows(img, x_range=(None, None), y_range=(400, 500), window_size=(144, 144), overlap=(0.75, 0.75))
 3. windows += get_windows(img, x_range=(None, None), y_range=(430, 550), window_size=(192, 192), overlap=(0.75, 0.75))
@@ -133,5 +137,11 @@ Here's an example result showing the heatmap from a series of frames of video, t
 
 ####1. Briefly discuss any problems / issues you faced in your implementation of this project.  Where will your pipeline likely fail?  What could you do to make it more robust?
 
-There are many false positives detected in the images. I used some thresholding approaches to remove the false positives but still there is a scope of improvement in this area.  
+1. The HOG and SVM model used during this project seems to be limited in generalizing the results. I think there will be many placed where which model will also. Also there are some false positives even in this video itself.
+2. Hard coded "region of interest" will not be applicable for all scenarios. Even within the same video each frame can have its own region of interest.
 
+**Suggestions for improvement**
+1. Using diversed dataset will make sure the model is generalized for various scenarios. Also we can experiment with other model apart from SVM to check if others perform better in certain situations.
+2. Adding a neural network model layer to learn more aspects of the frame and not just focus on fixed training information.
+3. Smart detection of the region of interest. Currently the region of interest if fixed and is only applicable for this video. The region of interest should smart and should be able to find correct values specific to each frame and each condition.
+4. Template matching based on pre detected cars can be one approach. This should be adaptive i.e. when a car is detected then it should be template matched for only few frames (as car orientation remains the same) and then after few frames new car features should be saved for future detection.  
