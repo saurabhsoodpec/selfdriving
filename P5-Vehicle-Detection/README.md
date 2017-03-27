@@ -23,6 +23,7 @@ The goals / steps of this project are the following:
 [image11]: ./output_images/HSV-S-Channel.png
 [image12]: ./output_images/YCrCb-Y-Channel.png
 [image13]: ./output_images/color-space.png
+[image14]: ./output_images/false-positive-detection.png
 [video1]: ./project_video_out.mp4
 
 ---
@@ -122,14 +123,20 @@ Here's a [link to my video result](./project_video_out.mp4)
 
 ####2. Describe how (and identify where in your code) you implemented some kind of filter for false positives and some method for combining overlapping bounding boxes.
 
-I recorded the positions of positive detections in each frame of the video.  From the positive detections I created a heatmap and then thresholded that map to identify vehicle positions.  I then used `scipy.ndimage.measurements.label()` to identify individual blobs in the heatmap.  I then assumed each blob corresponded to a vehicle.  I constructed bounding boxes to cover the area of each blob detected.  
+Here are the approaches applied to detect and remove false positives - 
 
-Here's an example result showing the heatmap from a series of frames of video, the result of `scipy.ndimage.measurements.label()` and the bounding boxes then overlaid on the last frame of video:
+1. Heatmap creation - This allows to create a heatmap of all the sliding window detection and this highlights the areas where a detection was found by multiple sliding windows. If there is a detection by one sliding window but not its corresponding windows then it can be a false positive.
+2. Motion averaging - This keeps track of the detection in the previous image and then creates a averaged map of the current frame. If there is a detection in only one frame but not in its next frame then it will be a false positive. 
 
-### Here are six frames and their corresponding heatmaps:
+To understand the complete approach please refer to 'execute' and 'blur_boxes' method of 'CarND-Vehicle-Detection.ipynb'
 
-![alt text][image5]
-![alt text][image6]
+### Here are six frames and their corresponding final heatmaps:
+
+1. Original Image
+2. All Raw Windows detected
+3. Final heatmap after applying weight heatmap and and motion averaging (using blur boxes)  
+
+![alt text][image14]
 
 ---
 
