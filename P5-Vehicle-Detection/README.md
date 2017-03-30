@@ -140,7 +140,7 @@ To understand the complete approach please refer to 'execute' and 'blur_boxes' m
 
 
 Here is the final output - 
-[![ScreenShot](./examples/youtube.png)](https://youtu.be/2ubWlGA5mBo)
+[![ScreenShot](./output_images/youtube.png)](https://youtu.be/2ubWlGA5mBo)
 
 ---
 
