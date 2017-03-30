@@ -138,6 +138,10 @@ To understand the complete approach please refer to 'execute' and 'blur_boxes' m
 
 ![alt text][image14]
 
+
+Here is the final output - 
+[![ScreenShot](./examples/youtube.png)](https://youtu.be/2ubWlGA5mBo)
+
 ---
 
 ###Discussion
