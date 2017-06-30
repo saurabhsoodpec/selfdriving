@@ -28,10 +28,10 @@ UKF::UKF() {
   P_ = MatrixXd(5, 5);
 
   // Process noise standard deviation longitudinal acceleration in m/s^2
-  std_a_ = 30;
+  std_a_ = 0.4;
 
   // Process noise standard deviation yaw acceleration in rad/s^2
-  std_yawdd_ = 30;
+  std_yawdd_ = 0.2;
 
   // Laser measurement noise standard deviation position1 in m
   std_laspx_ = 0.15;
@@ -40,13 +40,13 @@ UKF::UKF() {
   std_laspy_ = 0.15;
 
   // Radar measurement noise standard deviation radius in m
-  std_radr_ = 0.3;
+  std_radr_ = 0.5;
 
   // Radar measurement noise standard deviation angle in rad
-  std_radphi_ = 0.03;
+  std_radphi_ = 0.01;
 
   // Radar measurement noise standard deviation radius change in m/s
-  std_radrd_ = 0.3;
+  std_radrd_ = 0.25;
 
   /**
   TODO:
@@ -55,6 +55,10 @@ UKF::UKF() {
 
   Hint: one or more values initialized above might be wildly off...
   */
+  is_initialized_ = false;
+  MatrixXd H_laser;
+  MatrixXd R_laser;
+        	 
 }
 
 UKF::~UKF() {}
@@ -67,20 +71,29 @@ void UKF::ProcessMeasurement(MeasurementPackage meas_package) {
   if (!is_initialized_) {
     // first measurement
     x_ << 1, 1, 1, 1, 0;
-	/**
-	TODO: Check what should be default value of P_
+	
+	//TODO: Check what should be default value of P_
 	P_ << 1, 0, 0, 0, 0,
 		  0, 1, 0, 0, 0,
 		  0, 0, 1, 0, 0,
-		  0, 0, 0, 1000, 0,
-		  0, 0, 0, 0, 1000;
-	*/
+		  0, 0, 0, 1, 0,
+		  0, 0, 0, 0, 1;
+
+	H_laser = MatrixXd(2, 5);
+	H_laser << 1, 0, 0, 0, 0,
+			   0, 1, 0, 0, 0;
+			   
+	R_laser = MatrixXd(2, 2);
+  	R_laser << std_laspx_*std_laspx_, 0,
+        	 0, std_laspy_*std_laspy_;
 	
+	/*
 	P_ <<   0.0043,   -0.0013,    0.0030,   -0.0022,   -0.0020,
           -0.0013,    0.0077,    0.0011,    0.0071,    0.0060,
            0.0030,    0.0011,    0.0054,    0.0007,    0.0008,
           -0.0022,    0.0071,    0.0007,    0.0098,    0.0100,
           -0.0020,    0.0060,    0.0008,    0.0100,    0.0123;
+    */
           	  
     if (meas_package.sensor_type_ == MeasurementPackage::RADAR) {
       cout << "TODO:: U Kalman Filter Initialization RADAR" << endl;
@@ -98,7 +111,10 @@ void UKF::ProcessMeasurement(MeasurementPackage meas_package) {
 
     } else if (meas_package.sensor_type_ == MeasurementPackage::LASER) {
       	cout << "U Kalman Filter Initialization LASER" << endl;
-
+		if ( fabs(meas_package.raw_measurements_[0]) < 0.001 && fabs(meas_package.raw_measurements_[1]) < 0.001 )  {
+   			meas_package.raw_measurements_[0] = 0.001;   
+   			meas_package.raw_measurements_[1] = 0.001;
+		}
 		//set the state with the initial location and zero velocity
 		x_ << meas_package.raw_measurements_[0], meas_package.raw_measurements_[1], 0, 0, 0;
 		
@@ -114,15 +130,26 @@ void UKF::ProcessMeasurement(MeasurementPackage meas_package) {
 	double delta_t = (meas_package.timestamp_ - time_us_) / 1000000.0;	//dt - expressed in seconds
 	time_us_ = meas_package.timestamp_;
     
+   if(use_laser_ || use_radar_) {
+   		cout << "Preparing for PREDICTION" << endl;
+		while (delta_t > 0.2) {
+      		double step = 0.1;
+      		Prediction(step);
+      		delta_t -= step;
+  		}
+  		Prediction(delta_t);
+  	}
+  
+  
     if(use_laser_ && meas_package.sensor_type_ == MeasurementPackage::LASER) {
     	cout << "IN LASER" << endl;
-    	Prediction(delta_t);
+    	
     	UpdateLidar(meas_package.raw_measurements_);
     } 
     
     if(use_radar_ && meas_package.sensor_type_ == MeasurementPackage::RADAR) {
     	cout << "IN RADAR" << endl;
-    	Prediction(delta_t);
+    	
     	UpdateRadar(meas_package.raw_measurements_);
     }
 }
@@ -164,17 +191,12 @@ void UKF::UpdateLidar(const VectorXd &z) {
 
   You'll also need to calculate the lidar NIS.
   */
-  //cout << "KalmanFilter Update start. " << "x_ = " << x_ << " and H_ = " << H_ << endl;
+  
   //
   cout << "************************* UpdateLidar method START *************************" << endl;
+  cout << "UpdateLidar UpdateLidar start. " << "x_ = " << endl << x_ << endl <<  "P_ = " << endl << P_ << endl << " and H_laser = " << H_laser << endl;
+  
   //measurement matrix
-  MatrixXd H_laser = MatrixXd(2, 5);
-  H_laser << 1, 0, 0, 0, 0,
-			 0, 1, 0, 0, 0;
-		
-  MatrixXd R_laser = MatrixXd(2, 2);
-  R_laser << 0.0225, 0,
-        	 0, 0.0225;
         		
   VectorXd z_pred = H_laser * x_;
   cout << "UpdateLidar z_pred=" << z_pred << endl;
@@ -439,11 +461,15 @@ void UKF::PredictRadarMeasurement(MatrixXd Xsig_pred, VectorXd* z_out, MatrixXd*
 
     double v1 = cos(yaw)*v;
     double v2 = sin(yaw)*v;
-
+	
+	double param = p_x*p_x + p_y*p_y;
+	if(fabs(param) < 0.001) {
+		param = 0.001;
+	}
     // measurement model
-    Zsig(0,i) = sqrt(p_x*p_x + p_y*p_y);                        //r
+    Zsig(0,i) = sqrt(param);                        //r
     Zsig(1,i) = atan2(p_y,p_x);                                 //phi
-    Zsig(2,i) = (p_x*v1 + p_y*v2 ) / sqrt(p_x*p_x + p_y*p_y);   //r_dot
+    Zsig(2,i) = (p_x*v1 + p_y*v2 ) / sqrt(param);   //r_dot
   }
 
   //cout << "*************************2 PredictRadarMeasurement method START *************************" << endl;
