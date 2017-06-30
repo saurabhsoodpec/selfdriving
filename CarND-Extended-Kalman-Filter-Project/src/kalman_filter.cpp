@@ -74,7 +74,11 @@ void KalmanFilter::UpdateEKF(const VectorXd &z) {
 	//Applying measurement update.
 	VectorXd y = z - hx_;
 	cout << "KalmanFilter y=" << y << endl;
-	
+	// angle normalization
+	while (y(1)> M_PI) y(1)-=2.*M_PI;
+	while (y(1)<-M_PI) y(1)+=2.*M_PI;
+	cout << "KalmanFilter After normalization y=" << y << endl;
+
 	UpdateMeasurement(y);
 }
 
