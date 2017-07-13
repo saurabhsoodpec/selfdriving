@@ -38,16 +38,15 @@ There's an experimental patch for windows in this [PR](https://github.com/udacit
 ## Evaluating PID values
 Initially I started with a default PID values and tuned those values manually to reach a stable configuration where the car was driving optimally and car was following the track for some time. Then I implemented dynamic TWIDDLE algorithm which optimizes PID values while driving the car and tries to reach a better and more stable configuration after each run. The approach for TWIDDLE is to tune each one parameter at a time and check if the changed helped to reduce the total error. If the error is reduced in the next iteration then the change is kept else the change is ignored.
 
-Here is the TWIDDLE algorithm - 
-
-def twiddle(tol=0.2): 
-    p = [0, 0, 0]
-    dp = [1, 1, 1]
-    robot = make_robot()
-    x_trajectory, y_trajectory, best_err = run(robot, p)
-
-    it = 0
-    while sum(dp) > tol:
+Here is the TWIDDLE algorithm -
+    
+    def twiddle(tol=0.2): 
+     p = [0, 0, 0]
+     dp = [1, 1, 1]
+     robot = make_robot()
+     x_trajectory, y_trajectory, best_err = run(robot, p)
+     it = 0
+     while sum(dp) > tol:
         print("Iteration {}, best error = {}".format(it, best_err))
         for i in range(len(p)):
             p[i] += dp[i]
@@ -69,7 +68,7 @@ def twiddle(tol=0.2):
                     p[i] += dp[i]
                     dp[i] *= 0.9
         it += 1
-    return p
+     return p
     
  The code is customized to adapt to dynamic driving scenario in the method PID.twiddle()
  https://github.com/saurabhsoodpec/selfdriving/blob/master/CarND-PID-Control-Project/src/PID.cpp  
