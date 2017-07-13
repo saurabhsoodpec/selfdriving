@@ -35,58 +35,53 @@ There's an experimental patch for windows in this [PR](https://github.com/udacit
 3. Compile: `cmake .. && make`
 4. Run it: `./pid`. 
 
-## Editor Settings
+## Evaluating PID values
+Initially I started with a default PID values and tuned those values manually to reach a stable configuration where the car was driving optimally and car was following the track for some time. Then I implemented dynamic TWIDDLE algorithm which optimizes PID values while driving the car and tries to reach a better and more stable configuration after each run. The approach for TWIDDLE is to tune each one parameter at a time and check if the changed helped to reduce the total error. If the error is reduced in the next iteration then the change is kept else the change is ignored.
 
-We've purposefully kept editor configuration files out of this repo in order to
-keep it as simple and environment agnostic as possible. However, we recommend
-using the following settings:
+Here is the TWIDDLE algorithm - 
 
-* indent using spaces
-* set tab width to 2 spaces (keeps the matrices in source code aligned)
+def twiddle(tol=0.2): 
+    p = [0, 0, 0]
+    dp = [1, 1, 1]
+    robot = make_robot()
+    x_trajectory, y_trajectory, best_err = run(robot, p)
 
-## Code Style
+    it = 0
+    while sum(dp) > tol:
+        print("Iteration {}, best error = {}".format(it, best_err))
+        for i in range(len(p)):
+            p[i] += dp[i]
+            robot = make_robot()
+            x_trajectory, y_trajectory, err = run(robot, p)
 
-Please (do your best to) stick to [Google's C++ style guide](https://google.github.io/styleguide/cppguide.html).
+            if err < best_err:
+                best_err = err
+                dp[i] *= 1.1
+            else:
+                p[i] -= 2 * dp[i]
+                robot = make_robot()
+                x_trajectory, y_trajectory, err = run(robot, p)
 
-## Project Instructions and Rubric
+                if err < best_err:
+                    best_err = err
+                    dp[i] *= 1.1
+                else:
+                    p[i] += dp[i]
+                    dp[i] *= 0.9
+        it += 1
+    return p
+    
+ The code is customized to adapt to dynamic driving scenario in the method PID.twiddle()
+ https://github.com/saurabhsoodpec/selfdriving/blob/master/CarND-PID-Control-Project/src/PID.cpp  
+ 
+ Also, the Throttle was customized based on the steer angle. Refer to the method PID.getThrottle().
+ 
+ ## Here are the final PID values -
 
-Note: regardless of the changes you make, your project must be buildable using
-cmake and make!
+Kp = 0.14
+Ki = 0
+Kd = 3.16886
 
-More information is only accessible by people who are already enrolled in Term 2
-of CarND. If you are enrolled, see [the project page](https://classroom.udacity.com/nanodegrees/nd013/parts/40f38239-66b6-46ec-ae68-03afd8a601c8/modules/f1820894-8322-4bb3-81aa-b26b3c6dcbaf/lessons/e8235395-22dd-4b87-88e0-d108c5e5bbf4/concepts/6a4d8d42-6a04-4aa6-b284-1697c0fd6562)
-for instructions and the project rubric.
+These are the values used as initial default for the program, but since dynamic twiddle is enable, these values are modified at the runtime to achive a even better config based on other parameters such as track and driving speed.
 
-## Hints!
-
-* You don't have to follow this directory structure, but if you do, your work
-  will span all of the .cpp files here. Keep an eye out for TODOs.
-
-## Call for IDE Profiles Pull Requests
-
-Help your fellow students!
-
-We decided to create Makefiles with cmake to keep this project as platform
-agnostic as possible. Similarly, we omitted IDE profiles in order to we ensure
-that students don't feel pressured to use one IDE or another.
-
-However! I'd love to help people get up and running with their IDEs of choice.
-If you've created a profile for an IDE that you think other students would
-appreciate, we'd love to have you add the requisite profile files and
-instructions to ide_profiles/. For example if you wanted to add a VS Code
-profile, you'd add:
-
-* /ide_profiles/vscode/.vscode
-* /ide_profiles/vscode/README.md
-
-The README should explain what the profile does, how to take advantage of it,
-and how to install it.
-
-Frankly, I've never been involved in a project with multiple IDE profiles
-before. I believe the best way to handle this would be to keep them out of the
-repo root to avoid clutter. My expectation is that most profiles will include
-instructions to copy files to a new location to get picked up by the IDE, but
-that's just a guess.
-
-One last note here: regardless of the IDE used, every submitted project must
-still be compilable with cmake and make./
+You can check the final result in the video - https://youtu.be/0-3Hd-T9rg4
