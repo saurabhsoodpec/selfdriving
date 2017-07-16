@@ -45,7 +45,7 @@ class FG_eval {
     // the Solver function below.
 	  fg[0] = 0; //COST
 	  for(int i=0; i<N; i++) {
-		  fg[0] += 100 * CppAD::pow(vars[cte_start+i],2);
+		  fg[0] += 500 * CppAD::pow(vars[cte_start+i],2);
 		  fg[0] += 100 * CppAD::pow(vars[epsi_start+i],2);
 		  fg[0] += 0.1 * CppAD::pow(vars[v_start+i] - v_ref ,2);
 	  }

@@ -10,6 +10,23 @@ Self-Driving Car Engineer Nanodegree Program
 4. Evaluate the new state using the current state, including the latency of the 100ms.
 5. Find the best fit steering and throttle by using IOPT SOLVE operation.
 
+## Handling Control Latency 
+In real driving situations there is a latency between when the actuation command is given and when the actuation actually happens. This is due to the various systems involved from trigger to implementation. In this project Latency is handled during the initial calculation of the car state. Latency parameter defined in this model is 100ms.
+The approach to handle latency is to evaluate the future state of the car after taking into consideration the latency (equations shown below). 
+
+			/* Form the new state, considering the latency delay */
+		    const double dMultiplier = (dSteer / Lf); 
+		    const double x0_new = 0.0 + (v * cos(0.0) * LATENCY);  /* X, Y and Psi are 0 in vehicle frame */
+		    const double y0_new = 0.0 + (v * sin(0.0) * LATENCY);
+		    const double psi0_new = 0.0 - (v * dMultiplier * LATENCY);
+		    const double v0_new = v + (dThrottle * LATENCY); /* Assume throttle to be acceleration */
+		    const double cte0_new = cte - (v * sin(epsi) * LATENCY);
+		    const double epsi0_new = epsi - (v * dMultiplier * LATENCY);
+		    state << x0_new, y0_new, psi0_new, v0_new, cte0_new, epsi0_new;
+
+Now using this new state as "x0" means that car has driven to the new state for the time duration of the LATENCY (100ms). Now this new state is the input state and the next set of actuations will be applied on this new updated state.
+
+
 ## The Model
 Model used in the project is based on MPC i.e. Model Predictive Control - Plot a Reference trajectory using the given waypoints, get the initial state and fitted polynomial as the input to a IOPT Solver. Solver uses the Model, Constrains and Cost function to evaluate the optimized delta (steering) and throttle (acceleration). Following are the state params - 
 
@@ -73,8 +90,7 @@ Variable Constraints are defined as  below. Here the upper and lower value of th
 	  }
 
 ##  Hyper Parameters
-The hyper parameters (the weights of the cost function, N and dt) were chosen based on the fact that the accuracy of the car is maintained if we keep "dt" small and N will provide by visibility for the number of iterations.
-Also reference velocity is decided based on the expected speed of the car and accracy of driving.
+The hyper parameters (the weights of the cost function, N and dt) were chosen based on the fact that the accuracy of the car is maintained if we keep "dt" small and N will provide by visibility for the number of iterations. The totalT i.e. N * dt is 5 seconds. This means the model predicts upto five seconds into the future. This keep the model limited and accurate. Also reference velocity is decided based on the expected speed of the car and accuracy of driving.
 Here are the final parameters - 
 
 1. N = 10;
