@@ -30,7 +30,9 @@ Append the new points with spacing proportional to the reference vehicle velocit
 
 ## Result -
 
-![15 miles](./path-planning.png)
+![131 miles](./path-planning1.png)
+![131 miles](./path-planning2.png)
+![131 miles](./path-planning3.png)
 
 Actual output result video - https://youtu.be/zcXPt3tnrp8 
 
