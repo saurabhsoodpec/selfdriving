@@ -30,7 +30,9 @@ Append the new points with spacing proportional to the reference vehicle velocit
 
 ## Result -
 
-(./path-planning.png)
+![15 miles](./path-planning.png)
+
+Actual output result video - https://youtu.be/zcXPt3tnrp8 
 
 ### Simulator.
 You can download the Term3 Simulator which contains the Path Planning Project from the [releases tab (https://github.com/udacity/self-driving-car-sim/releases).
