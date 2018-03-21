@@ -1,7 +1,6 @@
 # Semantic Segmentation
 ### Introduction
 In this project, you'll label the pixels of a road in images using a Fully Convolutional Network (FCN). The approach will be used as described in the paper https://people.eecs.berkeley.edu/~jonlong/long_shelhamer_fcn.pdf.
-\n
 Labelling the pixels of a road in images using a Fully Convolutional Network (FCN) with the FCN-8 architecture developed 
 
 ![network](./network.png)
