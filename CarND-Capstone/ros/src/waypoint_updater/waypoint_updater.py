@@ -122,10 +122,10 @@ class WaypointUpdater(object):
         # self.monitor_values()
         #rospy.loginfo('SS::WAYPOINT_UPDATER::First cur_base_waypoints = %s', cur_base_waypoints[0])
         if self.stopline_wp_idx == -1 or (self.stopline_wp_idx >= farmost_idx):
-            rospy.loginfo('\nSS::WP_UPDATER::NO RED LIGHT SIGNAL FOUND. Moving ahead stopline_wp_idx(%s) >= farmost_idx(%s)', self.stopline_wp_idx, farmost_idx)
+            rospy.loginfo('SS::WP_UPDATER::NO RED LIGHT SIGNAL FOUND. Moving ahead stopline_wp_idx(%s) >= farmost_idx(%s)', self.stopline_wp_idx, farmost_idx)
             lane.waypoints = cur_base_waypoints
         else:
-            rospy.loginfo('\nSS::WP_UPDATER::RED LIGHT SIGNAL FOUND, Decelerating...')
+            rospy.loginfo('SS::WP_UPDATER::RED LIGHT SIGNAL FOUND, Decelerating...')
             lane.waypoints = self.decelerate_wp(cur_base_waypoints)
 
         return lane
@@ -151,7 +151,7 @@ class WaypointUpdater(object):
     def traffic_cb(self, msg):
         # TODO: Callback for /traffic_waypoint message. Implement
         #print(msg)
-        rospy.loginfo('\nSS::WP_UPDATER::TRAFFIC_CB:: STOPLINE_IDX=%s', msg.data)
+        rospy.loginfo('SS::WP_UPDATER::TRAFFIC_CB:: STOPLINE_IDX=%s', msg.data)
         self.stopline_wp_idx = msg.data
 
     def obstacle_cb(self, msg):

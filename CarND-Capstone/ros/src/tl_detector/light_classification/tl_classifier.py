@@ -15,7 +15,7 @@ confidence_cutoff = 0.3  # confidence to detect object and edge
 padx = 20   # the padding from the boundary 
 pady = 20   # the padding from the boundary 
 red_green_contrast = 1.8 # if red color is 1.8 times more than green color in the bounding box, treat as red light.
-type_traffic_light = 10.0 # seems class 10.0 is for traffic light like thing
+type_traffic_light = 10.0 # seems class 10.0 is for traffic light
 
 class TLClassifier(object):
     nn_process_counter = 0 # count each pass to bypass a percentage of the images to be able to test in VM
@@ -132,7 +132,7 @@ class TLClassifier(object):
 
         time_after_nn = time.time()
 
-        print("NN process time:" + str(time_after_nn - time_before_nn))
+        print("SS::TL_CLASSIFIER::NN time:" + str(time_after_nn - time_before_nn))
         # compare the red color with green color
         for i in range(len(box_coords)):
             if classes[i] == type_traffic_light: 
@@ -154,11 +154,11 @@ class TLClassifier(object):
 
                 if float(r) > 10 * float(g):
                      if self.previous_clasification != TrafficLight.RED:
-                        print("***********Changed to RED**********")
+                        print("SS::TL_CLASSIFIER::NN ***********Light changed to RED**********")
                      self.previous_clasification = TrafficLight.RED
                      return TrafficLight.RED
 
         if self.previous_clasification != TrafficLight.GREEN:
-            print("**********Changed to GREEN**********")
+            print("SS::TL_CLASSIFIER::NN **********Light changed to GREEN**********")
         self.previous_clasification = TrafficLight.GREEN
         return TrafficLight.GREEN
