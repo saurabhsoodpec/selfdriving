@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/student/git/CarND-Capstone/ros/src
+CMAKE_SOURCE_DIR = /home/student/git/saurabhsoodpec/selfdriving/CarND-Capstone/ros/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/student/git/CarND-Capstone/ros/build
+CMAKE_BINARY_DIR = /home/student/git/saurabhsoodpec/selfdriving/CarND-Capstone/ros/build
 
 # Utility rule file for sensor_msgs_generate_messages_nodejs.
 
@@ -63,10 +63,10 @@ styx/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/build: sensor_msgs_gene
 .PHONY : styx/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/build
 
 styx/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/clean:
-	cd /home/student/git/CarND-Capstone/ros/build/styx && $(CMAKE_COMMAND) -P CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/cmake_clean.cmake
+	cd /home/student/git/saurabhsoodpec/selfdriving/CarND-Capstone/ros/build/styx && $(CMAKE_COMMAND) -P CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/cmake_clean.cmake
 .PHONY : styx/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/clean
 
 styx/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/depend:
-	cd /home/student/git/CarND-Capstone/ros/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/student/git/CarND-Capstone/ros/src /home/student/git/CarND-Capstone/ros/src/styx /home/student/git/CarND-Capstone/ros/build /home/student/git/CarND-Capstone/ros/build/styx /home/student/git/CarND-Capstone/ros/build/styx/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/student/git/saurabhsoodpec/selfdriving/CarND-Capstone/ros/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/student/git/saurabhsoodpec/selfdriving/CarND-Capstone/ros/src /home/student/git/saurabhsoodpec/selfdriving/CarND-Capstone/ros/src/styx /home/student/git/saurabhsoodpec/selfdriving/CarND-Capstone/ros/build /home/student/git/saurabhsoodpec/selfdriving/CarND-Capstone/ros/build/styx /home/student/git/saurabhsoodpec/selfdriving/CarND-Capstone/ros/build/styx/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : styx/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/depend
 

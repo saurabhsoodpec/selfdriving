@@ -140,6 +140,7 @@ class TLDetector(object):
             int: ID of traffic light color (specified in styx_msgs/TrafficLight)
 
         """
+        rospy.loginfo('SS::TL_DETECT::******* INSIDE get_light_state ******')
         # In testing env, the light state is given
         # TODO change to use classifier in the real code
         #if True: 
@@ -192,10 +193,10 @@ class TLDetector(object):
             rospy.loginfo('SS::TL_DETECT::AFTER - CAR_IDX=%s, TL_CLOSE_IDX=%s, DIFF=%s',car_wp_idx, line_wp_idx, diff)
             if closest_light and diff <= 100:
                 state = self.get_light_state(closest_light)
-                rospy.loginfo('SS::LT_DETECT::Closest_light IDX=%s and State=%s', line_wp_idx, state)
+                rospy.loginfo('SS::TL_DETECT::Closest_light IDX=%s and State=%s', line_wp_idx, state)
                 return line_wp_idx, state
                 
-            rospy.loginfo('SS::LT_DETECT::NO Closest_light Found')
+            rospy.loginfo('SS::TL_DETECT::NO Closest_light Found')
         return -1, TrafficLight.UNKNOWN
 
 if __name__ == '__main__':

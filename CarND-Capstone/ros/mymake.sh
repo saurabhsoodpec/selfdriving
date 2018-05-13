@@ -1,4 +1,4 @@
 rosclean purge -y
 catkin_make
-source devel/setup.sh 
-roslaunch launch/styx.launch 
+source ./devel/setup.sh 
+roslaunch ./launch/styx.launch 
