@@ -1,5 +1,45 @@
 This is the project repo for the final project of the Udacity Self-Driving Car Nanodegree: Programming a Real Self-Driving Car. For more information about the project, see the project introduction [here](https://classroom.udacity.com/nanodegrees/nd013/parts/6047fe34-d93c-4f50-8336-b70ef10cb4b2/modules/e1a23b06-329a-4684-a717-ad476f0d8dff/lessons/462c933d-9f24-42d3-8bdc-a08a5fc866e4/concepts/5ab4b122-83e6-436d-850f-9f4d26627fd9).
 
+# udacity-carnd-capstone
+This is the project repo for the final project of the Udacity Self-Driving Car Nanodegree: Programming a Real Self-Driving Car. 
+
+# System Architecture
+The following is a system architecture diagram showing the ROS nodes and topics used in the project.
+![architecture](./imgs/architecture.png)
+
+## Traffic Light Detection
+Since we know the locations of the traffic lights and the vechile, we can get reduce the classification problem to transformation and detection problem. Color is easier to detect in HSV space. In our use case, red light is very important and in HSV space red has two different ranges, since we want to be very sensitive to red light, I include both range in the the mask. Further improments can be made when dealing with unknown locations and complex data by applying Deep NN solutions.
+
+## Waypoint Updater
+The purpose of waypoint updater is to update the target velocity property of each waypoint based on traffic light and obstacle detection data. The target veloicty at normal situdation is given from `waypoint_loader` node. If the red light is detected, we genetated stopping trajectory considering vehicle's deceleration limits. 
+
+## Waypoint Follower
+The longitudinal target velocity was set in `waypoint_updater` node. This node determine the target yawrate to keep the lane by using pure-pursuit algorithm.
+
+## DBW(Drive-By-Wire) Node
+This node finally calculates throttle, brake and steering angle to follow longitudinal and lateral trajectory simultaneously. We used PID controller to calculate throttle and brake based on the difference between the current velocity and the target velocity. We also use PID controller based on cross-track error (cte) to calculate appropriate steering command.
+
+##Image Classification 
+Here are the steps used to detect a red light in the simulator - 
+
+1. Object classification of an image is done using a pre-trained frozen model "ssd_inception_v2_coco_2017_11_17". This neural network is used to detect and classify objects from an image.
+2. Each image published on topic /image_color is sent to the neural network for classification. The resulting output is a list of bounding boxed with classified objects. 
+3. Class=10 is used to filter traffic lights from the image.
+4. Then all traffic lights boxes are pixels are traversed to detect the color of light RED, GREEN, YELLOW or UNKNOWN.
+5. If the ratio of RED is more than a particular threshold, over any other color then we classify that the light is RED.
+6. This response is sent back to "tl_detector" node to publish it to topic "/traffic_waypoint" which is read by the "waypoint_updater" node.   
+
+## Object Classification Results:
+![tl-classification-results 1](./imgs/tl-classification-results1.png)
+![tl-classification-results 1](./imgs/tl-classification-results2.png)
+![tl-classification-results 1](./imgs/tl-classification-results3.png)
+![tl-classification-results 1](./imgs/tl-classification-results4.png)
+
+Details on the implementation are available on [Jupyter Notebook](https://github.com/saurabhsoodpec/selfdriving/blob/master/CarND-Capstone/ros/src/tl_detector/light_classification/tl_classifier.ipynb)
+
+
+#Original documentation and installation details
+
 Please use **one** of the two installation options, either native **or** docker installation.
 
 ### Native Installation
