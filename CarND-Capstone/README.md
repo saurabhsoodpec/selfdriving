@@ -29,7 +29,7 @@ Here are the steps used to detect a red light in the simulator -
 5. If the ratio of RED is more than a particular threshold, over any other color then we classify that the light is RED.
 6. This response is sent back to "tl_detector" node to publish it to topic "/traffic_waypoint" which is read by the "waypoint_updater" node.   
 
-## Object Classification Results:
+# Object Classification Results:
 ![tl-classification-results 1](./imgs/tl-classification-results1.png)
 ![tl-classification-results 1](./imgs/tl-classification-results2.png)
 ![tl-classification-results 1](./imgs/tl-classification-results3.png)
@@ -38,7 +38,7 @@ Here are the steps used to detect a red light in the simulator -
 Details on the implementation are available on [Jupyter Notebook](https://github.com/saurabhsoodpec/selfdriving/blob/master/CarND-Capstone/ros/src/tl_detector/light_classification/tl_classifier.ipynb)
 
 
-#Original documentation and installation details
+# Original documentation and installation details
 
 Please use **one** of the two installation options, either native **or** docker installation.
 
