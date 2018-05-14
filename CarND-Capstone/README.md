@@ -19,15 +19,15 @@ The longitudinal target velocity was set in `waypoint_updater` node. This node d
 ## DBW(Drive-By-Wire) Node
 This node finally calculates throttle, brake and steering angle to follow longitudinal and lateral trajectory simultaneously. We used PID controller to calculate throttle and brake based on the difference between the current velocity and the target velocity. We also use PID controller based on cross-track error (cte) to calculate appropriate steering command.
 
-##Image Classification 
+## Image Classification 
 Here are the steps used to detect a red light in the simulator - 
 
 1. Object classification of an image is done using a pre-trained frozen model "ssd_inception_v2_coco_2017_11_17". This neural network is used to detect and classify objects from an image.
-2. Each image published on topic /image_color is sent to the neural network for classification. The resulting output is a list of bounding boxed with classified objects. 
+2. Each image published on topic "/image_color" is sent to the neural network for classification. The resulting output is a list of bounding boxed with classified objects. 
 3. Class=10 is used to filter traffic lights from the image.
-4. Then all traffic lights boxes are pixels are traversed to detect the color of light RED, GREEN, YELLOW or UNKNOWN.
-5. If the ratio of RED is more than a particular threshold, over any other color then we classify that the light is RED.
-6. This response is sent back to "tl_detector" node to publish it to topic "/traffic_waypoint" which is read by the "waypoint_updater" node.   
+4. Then all pixels of traffic light bounding boxes are traversed to detect the color of light RED, GREEN, YELLOW or UNKNOWN.
+5. If the ratio of RED is more than a particular threshold, over any other color, then we classify that the light is RED.
+6. This response is processed by "tl_detector" node which publishes it to topic "/traffic_waypoint" which is read by the "waypoint_updater" node and required control signal is sent to the car.   
 
 More details and examples on the implementation are available on [Jupyter Notebook](https://github.com/saurabhsoodpec/selfdriving/blob/master/CarND-Capstone/ros/src/tl_detector/light_classification/tl_classifier.ipynb)
 
